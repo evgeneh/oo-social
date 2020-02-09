@@ -1,0 +1,40 @@
+.profilePage {
+	display: grid;
+	grid-column-gap: 10px;
+	grid-template-columns: 220px 1fr;
+}
+
+.profilePage {
+	margin-right: 9px;
+	background-color: white;
+}
+
+.profileData {
+	padding-top: 10px;
+	margin: 0px;	}
+
+.userInfo__header {
+	padding: 0px;
+	margin: 0 0 0 8px;
+	font-size: 13px;
+	border-bottom: solid 1px #DAE1E8;
+	color: #45688E;
+	font-weight: bold;  }
+
+.userInfo__header_edited {
+	display: flex;
+	padding: 1px;
+	width: 100%;
+}
+.userInfo__header_edited span {
+	float: left;
+	padding-top: 7px;
+	padding-right: 5px;
+}
+
+.leftBlock {
+	margin: 0px;
+	padding-top: 10px;
+	padding-left: 10px;
+	border-left: solid 1px #EAEEF3;
+}

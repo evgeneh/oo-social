@@ -1,0 +1,24 @@
+
+.main {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 118px 678px ;
+  grid-template-rows: 45px 1fr;
+  grid-template-areas:
+          "h h"
+          "nav body"
+}
+
+.pageHeader {
+  grid-area: h;
+}
+.sideBar {
+  grid-area: nav;
+
+  margin: 1px 1px 1px 9px;
+  padding-bottom: 10px;
+}
+
+.pageBody {
+  grid-area: body;
+}

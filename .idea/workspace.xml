@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="dd2ca76c-d9c0-4f9e-ab6e-aaf385296955" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1TlGQ7zrjrOaezFB6tz53al6Ria" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/photos" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\old-ontach\src\components\photos\modal-photo-view" />
+      <recent name="F:\old-ontach\src\components\profile\some-friends" />
+      <recent name="F:\old-ontach\src\components\instruments" />
+      <recent name="F:\old-ontach\src" />
+      <recent name="F:\old-ontach\src\components\profile" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\270120\oo_270120\src\components\photos" />
+      <recent name="F:\old-ontach\src\components\login-register" />
+      <recent name="F:\old-ontach\src\components\photos" />
+      <recent name="F:\old-ontach\src\redux\selectors" />
+      <recent name="F:\old-ontach\src\components\profile\rating-counter" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dd2ca76c-d9c0-4f9e-ab6e-aaf385296955" name="Default Changelist" comment="" />
+      <created>1574027250001</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1574027250001</updated>
+      <workItem from="1574027251385" duration="373000" />
+      <workItem from="1574053804963" duration="18604000" />
+      <workItem from="1574229244697" duration="2607000" />
+      <workItem from="1574236471092" duration="238000" />
+      <workItem from="1574237991647" duration="11035000" />
+      <workItem from="1574315757162" duration="9496000" />
+      <workItem from="1574400046057" duration="9879000" />
+      <workItem from="1574776101781" duration="199000" />
+      <workItem from="1574835727093" duration="7554000" />
+      <workItem from="1574925393861" duration="14919000" />
+      <workItem from="1575007638726" duration="1236000" />
+      <workItem from="1575009159237" duration="8282000" />
+      <workItem from="1575264724604" duration="18211000" />
+      <workItem from="1575349447799" duration="5026000" />
+      <workItem from="1575438964369" duration="9454000" />
+      <workItem from="1575529104564" duration="10940000" />
+      <workItem from="1575608510368" duration="8515000" />
+      <workItem from="1575876997504" duration="9996000" />
+      <workItem from="1575958558119" duration="15011000" />
+      <workItem from="1576042389225" duration="9895000" />
+      <workItem from="1576129145573" duration="7987000" />
+      <workItem from="1576215417844" duration="599000" />
+      <workItem from="1576216514862" duration="7864000" />
+      <workItem from="1576475070560" duration="9710000" />
+      <workItem from="1576559010908" duration="15502000" />
+      <workItem from="1576645213063" duration="2447000" />
+      <workItem from="1576648504655" duration="408000" />
+      <workItem from="1576650671780" duration="14800000" />
+      <workItem from="1577183585792" duration="2057000" />
+      <workItem from="1577253817930" duration="1214000" />
+      <workItem from="1577446758578" duration="7800000" />
+      <workItem from="1577513502428" duration="2431000" />
+      <workItem from="1577682540668" duration="20000" />
+      <workItem from="1577682573570" duration="13027000" />
+      <workItem from="1578544589570" duration="18619000" />
+      <workItem from="1578641860960" duration="16818000" />
+      <workItem from="1578897063686" duration="14120000" />
+      <workItem from="1578978702257" duration="9114000" />
+      <workItem from="1579008824828" duration="1388000" />
+      <workItem from="1579087995352" duration="1941000" />
+      <workItem from="1579160176856" duration="9359000" />
+      <workItem from="1579242496753" duration="7628000" />
+      <workItem from="1579497165615" duration="10668000" />
+      <workItem from="1579584132671" duration="11649000" />
+      <workItem from="1579671975680" duration="12395000" />
+      <workItem from="1579759732274" duration="13218000" />
+      <workItem from="1579845771406" duration="12155000" />
+      <workItem from="1580102087036" duration="7400000" />
+      <workItem from="1580155812163" duration="1893000" />
+      <workItem from="1580381860717" duration="10080000" />
+      <workItem from="1580449742547" duration="16063000" />
+      <workItem from="1580706089602" duration="7937000" />
+      <workItem from="1580714572512" duration="12290000" />
+      <workItem from="1580792575827" duration="28111000" />
+      <workItem from="1580882561176" duration="152000" />
+      <workItem from="1580882722942" duration="12969000" />
+      <workItem from="1581239898962" duration="5407000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>

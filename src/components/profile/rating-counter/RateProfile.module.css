@@ -1,0 +1,26 @@
+.percentValue {
+    color: #8BA1BC;
+    position: relative;
+    font-size: 11px;
+    top: 16px;
+    text-align: center;
+}
+
+.rateBlock {
+    margin: 0px 0px 28px 0px;
+}
+
+.rateBlock__filled {
+    float: left;
+    height: 16px;
+    background-color: #DAE2E8;
+    border-top: 1px solid #C0CCD9;
+}
+
+.rateBlock__empty {
+    float: left;
+    height: 16px;
+    background-color: #FAFAFA;
+    border-right: 1px solid #EEE;
+    border-top: 1px solid #EEE;
+}

@@ -1,0 +1,29 @@
+.profileInfo {
+    padding: 5px 0px 15px 8px;
+    display: grid;
+    grid-gap: 1px;
+    grid-template-columns: 120px 1fr;
+}
+
+.profileInfo input{
+    width: 95%;
+}
+
+.profileInfo textarea{
+    width: 95%;
+    resize: vertical;
+}
+
+.profileInfo [type=checkbox] {
+    width: auto;
+}
+
+.profileInfo__label {
+    color: gray;
+    padding: 2px;
+    display: grid;
+    align-self: center;
+}
+.profileInfo__data {
+    padding: 1px;
+}

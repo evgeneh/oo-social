@@ -1,0 +1,82 @@
+.formError {
+	color: orangered;
+	font-size: 10px;
+
+}
+.formLabel {
+	color: grey;
+	font-size: 10px;
+	padding-bottom: 2px;
+}
+
+.loginInput {
+	padding: 2px 0 4px 0;
+}
+
+.loginInput__profile {
+	float: left;
+}
+
+.loginInput input {
+	width: 100%;
+	padding: 4px 0 4px 8px;
+}
+
+.loginInput input:focus {
+	outline: none;
+	border: 1px solid #678AA9;
+}
+
+.formBlock {
+	padding: 5px;
+	display: grid;
+	justify-content: center;
+	grid-template-columns: 1fr;
+}
+
+.formBlock__inputs {
+	display: grid;
+	justify-content: center;
+	grid-template-columns: 180px;
+}
+
+.loginButton {
+	display: flex;
+	float: right;
+}
+
+
+labeledCB {
+	display: inline-block;
+}
+
+.labeledCB label {
+	vertical-align: middle;
+	padding-bottom: 10px;
+}
+
+.labeledCB input[type=checkbox] {
+	color:transparent;
+	transition: color ease .3s;
+	height: 15px;
+	display: inline-block;
+	transition: all .2s;
+}
+
+.labeledCB input[type=checkbox]:checked {
+	color: #000;
+}
+
+
+.fileUpload {
+	overflow: hidden;
+	position: relative;
+	cursor: pointer;
+}
+
+.fileUpload input[type=file] {
+	display: none;
+}
+
+
+

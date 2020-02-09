@@ -1,0 +1,48 @@
+.someUsers {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.profile__small {
+    text-align: center;
+    display: grid;
+    padding: 5px;
+}
+.profileImage {
+    display: table-cell;
+    vertical-align: middle;
+    horiz-align: center;
+
+}
+
+.profileImage img{
+    width: 50px;
+}
+
+.profile__small{
+    font-size: 10px;
+    color: #2B587A;
+    text-decoration: none;
+}
+
+.profile__small:hover{
+    color: #2B587A;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+.subBadge {
+    text-align: left;
+    padding: 2px 8px 2px 8px;
+    border-top: solid 1px #ccc;
+    background: #eee;
+    margin-bottom: 2px;
+}
+
+.subBadge__all {
+    text-align: right;
+    float: right;
+
+}

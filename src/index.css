@@ -1,0 +1,11 @@
+
+body {
+  background: #fff; text-align: left; margin: 0px; padding: 0px;
+  font-family: tahoma, tahoma, verdana, arial, sans-serif;
+  font-size: 11px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

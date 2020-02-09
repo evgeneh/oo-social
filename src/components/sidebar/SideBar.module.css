@@ -1,0 +1,53 @@
+.sideBar__nav {
+    list-style: none;
+    font-size: 1.01em;
+    margin: 3px 0 1.0em 0;
+    padding: 0; }
+
+.sideBar__profileLi {
+    padding: 0;
+    width: 90%;
+}
+.sideBar__profileLi  a{
+    text-decoration: none;
+}
+.sideBar__nav__profile {
+    border-top: 1px solid #FFF;
+    padding: 3px 3px 3px 6px;
+    color: #2B587A;
+}
+.sideBar__nav__profile:hover {
+    border-top: 1px solid #CAD1D9;
+    background: #DAE1E8;
+    color:#36638E;
+}
+.sideBar__nav__profile_edit {
+    color: gray;
+    padding: 3px 3px 3px 6px;
+}
+.sideBar__nav__profile_edit:hover {
+    border-top: 1px solid #CAD1D9;
+    background: #EAEEF2;
+    color:#36638E;
+}
+
+.sideBar__navLi {
+    border-bottom: 1px solid #FFF;
+    font-size: 1.0em;
+    display: block;
+}
+.sideBar__navLi a{
+    border-top: 1px solid #FFF;
+    font-size: 1.0em;
+    display: block;
+    padding: 3px 3px 3px 6px;
+    text-decoration: none;
+    color: #2B587A;
+}
+.sideBar__navLi a:hover {
+    background: #DAE1E8;
+    color:#36638E;
+    border-top: 1px solid #CAD1D9;
+    text-decoration: none;
+    padding: 3px 3px 3px 6px;
+}

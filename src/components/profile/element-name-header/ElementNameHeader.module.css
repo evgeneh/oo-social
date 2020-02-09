@@ -1,0 +1,31 @@
+.profileHeader {
+    grid-area: ph;
+}
+
+.profileBorder{
+    margin-right: 9px;
+    background-color: white;
+
+    box-shadow: 2px 2px 0px 0px #F6F8FA;
+
+    border-right: solid 1px #DAE1E8;
+    border-left: solid 1px #DAE1E8;
+    border-bottom: solid 1px #C3CAD2;
+}
+
+.profileBorder__subBorder {
+    border: 1px solid #EBF0F4;
+    border-top: 0px;
+}
+
+.profileHeader {
+    font-weight: bold;
+    font-size: 11px;
+    padding: 2px 10px 5px;
+    margin: 0px;
+    background-color: #EEE5B8;
+    color: black;
+    border-right: solid 1px #DCD4A4;
+    border-left: solid 1px #E4DDB4;
+    border-bottom: solid 1px #D7CF9E;
+}

@@ -1,0 +1,28 @@
+.badgeProfile__header {
+    cursor: pointer;
+    font-size: 11px;
+    padding: 3px 8px 3px 23px;
+}
+
+.badgeProfile__header_open {
+    border-top: solid 1px #45688E;
+    background: #DAE2E8;
+    color: #45688E;
+}
+
+.badgeProfile__header_roll{
+    background-color: #eee;
+    border-top: solid 1px #ccc;
+    background-repeat: no-repeat;
+    color: #888;
+}
+
+.badgeProfile__header h2 {
+    font-size: 11px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.badgeProfile__header:focus {
+    color: #777;
+}

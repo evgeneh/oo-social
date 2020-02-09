@@ -1,0 +1,17 @@
+.navLink {
+    color: #2B587A;
+    text-decoration: none;
+}
+.navLink:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.navLink__disabled {
+    color: #888;
+}
+
+.navLink__disabled:hover {
+    color: #888;
+    text-decoration: none;
+}
