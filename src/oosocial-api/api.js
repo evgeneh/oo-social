@@ -1,19 +1,21 @@
 import * as axios from 'axios'
 
 //настройка подключения к удалённому серверу
+/*
 const instance = axios.create({
     baseURL: process.env.REACT_APP_BASE_URL_SAMURAI,
     withCredentials: true,
     headers: {'API-KEY': process.env.REACT_APP_API_KEY_SAMURAI}
 });
+*/
 
 //настройка подключения к локальному серверу
-/*
+
 const instance = axios.create({
     baseURL: process.env.REACT_APP_BASE_URL_DEV,
     withCredentials: true
 });
-*/
+
 const savePhotoSingle = (route, photo) => {
     const formData = new FormData()
     formData.append('image', photo)

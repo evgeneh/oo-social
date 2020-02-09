@@ -22,7 +22,7 @@ let setInitSuccess = () => { return {type: SET_INITIALIZE} }
 export const initApp = () => (dispatch) => {
     dispatch(getAuthRequest()).then( () => {
         dispatch(setInitSuccess())
-}). catch ( () => alert("Sever is not available now :("))
+}).catch ( () => alert("Sever is not available now :("))
 
 }
 

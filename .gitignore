@@ -11,6 +11,15 @@
 # production
 /build
 
+package-lock.json
+
+# idea
+.idea/workspace.xml
+.idea/libraries
+
+/.idea/workspace.xml
+/.idea/libraries
+
 # misc
 .DS_Store
 .env

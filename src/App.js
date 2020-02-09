@@ -23,7 +23,6 @@ const FriendsContainer = React.lazy(() => import("./components/users/FriendsCont
 const App = ({isInitialized, initApp, isAuth, myId}) => {
 
     useEffect(() => initApp(), [isInitialized])
-
     if (!isInitialized) return <Preloader/>
     return (
         <div className='main'>
