@@ -4,7 +4,12 @@ import {connect} from "react-redux";
 import {compose} from "redux";
 import {withRouter} from "react-router-dom";
 
-import {getPhotosRequest, uploadPhotosRequest} from "../../redux/reducers/images-reducer";
+import {
+    getPhotosRequest,
+    uploadPhotosRequest,
+    setImageAsProfilePhoto,
+    deletePhoto
+} from "../../redux/reducers/images-reducer";
 import {getProfileRequest} from "../../redux/reducers/profile-reducer";
 
 import {getPhotosCount, getSortedImages} from "../../redux/selectors/photos-selector";
@@ -33,9 +38,10 @@ const mapStateToProps = (state) => {
         myId: state.auth.myId,
         isAuth: state.auth.isAuth,
         currentUploading: state.photos.currentUploading,
+        isProfilePhotoSet: state.photos.isProfilePhotoSet,
 
         fullName: getProfileFullName(state)
     }
 }
 
-export default compose(withRouter, connect(mapStateToProps, {getPhotosRequest, getProfileRequest, uploadPhotosRequest})) (PhotosContainer)
+export default compose(withRouter, connect(mapStateToProps, {getPhotosRequest, getProfileRequest, uploadPhotosRequest, setImageAsProfilePhoto, deletePhoto})) (PhotosContainer)

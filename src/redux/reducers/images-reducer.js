@@ -4,11 +4,13 @@ import {stopSubmit} from "redux-form";
 let initialState = {
     items: [],
     totalCount: 0,
-    currentUploading: null
+    currentUploading: null,
+    isProfilePhotoSet: false
 }
 
 const SET_PHOTOS = 'social-network/user-photos/SET_PHOTOS';
 const SET_IMAGE_ORDER = 'social-network/user-photos/SET_IMAGE_ORDER';
+const TOGGLE_PHOTO_SET = 'social-network/user-photos/TOGGLE_PHOTO_SET';
 
 export const imagesReducer = (state = initialState, action) => {
     switch (action.type) {
@@ -18,6 +20,8 @@ export const imagesReducer = (state = initialState, action) => {
             }
         case SET_IMAGE_ORDER:
             return {...state, currentUploading: action.order}
+        case TOGGLE_PHOTO_SET:
+            return {...state, isProfilePhotoSet: action.togglePhotoSet}
         default:
             return state;
     }
@@ -31,6 +35,8 @@ export const getPhotosRequest = (userId) => async (dispatch) => {
             dispatch(setPhotos(response.data.items, response.data.totalCount))
 }
 
+
+//---action задаёт порядковый номер загруженного файла
 const setUploadingImageOrder = (order) => {return {type: SET_IMAGE_ORDER, order}}
 
 export const uploadPhotosRequest = (photos) => async (dispatch, getState) => {
@@ -47,6 +53,27 @@ export const uploadPhotosRequest = (photos) => async (dispatch, getState) => {
     const myId = getState().auth.myId
     dispatch(getPhotosRequest(myId))
 }
+
+const setProfilePhoto = (togglePhotoSet) => { return {type: TOGGLE_PHOTO_SET, togglePhotoSet}}
+
+export const setImageAsProfilePhoto  = (id) => async (dispatch) => {
+    dispatch(setProfilePhoto(true))
+    const response = await mediaAPI.setAsProfilePhoto(id)
+    if (response.data.resultCode === 0)
+    {
+
+        dispatch(setProfilePhoto(false))}
+}
+
+export const deletePhoto  = (id) => async (dispatch) => {
+    dispatch(setProfilePhoto(true))
+    const response = await mediaAPI.deletePhoto(id)
+    if (response.data.resultCode === 0)
+    {
+        dispatch(getPhotosRequest(""))
+        dispatch(setProfilePhoto(false))}
+}
+
 
 
 

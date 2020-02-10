@@ -98,5 +98,13 @@ export const mediaAPI = {
 
     savePhoto(photo) {
         return savePhotoSingle('photo/', photo)
+    },
+
+    setAsProfilePhoto(id) {
+        return instance.put('photo/profile?id=' + id)
+    },
+
+    deletePhoto(id){
+        return instance.delete('photo?id=' + id)
     }
 }

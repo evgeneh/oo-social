@@ -9,6 +9,7 @@
 
 .navLink__disabled {
     color: #888;
+    cursor: default;
 }
 
 .navLink__disabled:hover {
