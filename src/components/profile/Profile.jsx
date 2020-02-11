@@ -15,12 +15,25 @@ import FileUpload from "../forms/FileUpload";
 import SomeFriendsBlock from "./some-friends/SomeFriendsBlock";
 import RateProfile from "./rating-counter/RateProfile";
 import FollowButton from "../instruments/buttons/FollowButton";
+import {singleProfileFollow} from "../../redux/reducers/profile-reducer";
 
-const LeftBlock = ({user, isOwner, uploadPhoto, setEditMode, rating, friends, beginFollowing}) => {
+const LeftBlock = ({user, isOwner, uploadPhoto, setEditMode, rating, friends, beginFollowing, ...props}) => {
+
     let imageSrc = (user.photos.large) ? user.photos.large : userDefPic
+
     const handleFileUpload = (event) => {
         if (event.target.files.length)
             uploadPhoto(event.target.files[0])
+    }
+
+    let {singleProfileFollow, singleProfileUnfollow, profileFollowingFetch} = props;
+    console.log(profileFollowingFetch)
+
+    const handleFollowUser = () => {
+        if (user.isFollow)
+            singleProfileUnfollow(user.userId)
+        else
+            singleProfileFollow(user.userId)
     }
 
 
@@ -45,7 +58,7 @@ const LeftBlock = ({user, isOwner, uploadPhoto, setEditMode, rating, friends, be
                             <Link linkName={"Send message to " + user.fullName} to={"/dialog" + user.userId}/>
                         </li>
                         <li>
-                            <FollowButton isFollow={user.isFollow} isStretched={true} buttonClick={() => { alert(user.userId); beginFollowing(user.userId) }}  />
+                            <FollowButton isFollow={user.isFollow} isStretched={true} buttonClick={handleFollowUser} isDisabled={profileFollowingFetch} />
                         </li>
                    </>
                 }
@@ -57,12 +70,11 @@ const LeftBlock = ({user, isOwner, uploadPhoto, setEditMode, rating, friends, be
 }
 
 //<div className={s.profilePage}>
-const Profile = ({user, setStatus, statusText, isOwner, uploadPhoto, uploadProfile, isEdit, profileUpdateFetching, friends, rating, beginFollowing}) => {
+const Profile = ({user, setStatus, statusText, isOwner, uploadProfile, isEdit, profileUpdateFetching, ...props}) => {
 
     let [isProfileEdit, setProfileEdit] = useState(false)
 
     useEffect( () => {
-
         setProfileEdit(isEdit)
     }, [isEdit])
 
@@ -71,10 +83,7 @@ const Profile = ({user, setStatus, statusText, isOwner, uploadPhoto, uploadProfi
     }
 
     const profileChangeSubmit = (formProfile) => {
-        console.log(formProfile)
         uploadProfile(formProfile)
-
-          //setProfileEdit(false)
     }
 
     const profileCloseEdit = () => {
@@ -84,13 +93,12 @@ const Profile = ({user, setStatus, statusText, isOwner, uploadPhoto, uploadProfi
     return (
         <ElementNameHeader text={user.fullName} >
             <div className={s.profilePage}>
-                <LeftBlock user={user} isOwner={isOwner} beginFollowing={beginFollowing}
-                           uploadPhoto={uploadPhoto} setEditMode={handleSetMode} friends={friends} rating={rating} />
+                <LeftBlock user={user} isOwner={isOwner} setEditMode={handleSetMode}  {...props} />
                 <div className={s.profileData}>
                     {(isProfileEdit && isOwner) ?
                         <UpdateProfileForm onSubmit={profileChangeSubmit} user={user} initialValues={user} onCancel={profileCloseEdit} >
                             <UserStatus statusText={statusText} />
-                            {profileUpdateFetching && <span>profile updating...</span>}
+                            {profileUpdateFetching && <h2>profile updating...</h2>}
                         </UpdateProfileForm>
                         :
                     <>

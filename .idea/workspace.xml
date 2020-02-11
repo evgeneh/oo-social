@@ -3,27 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="dd2ca76c-d9c0-4f9e-ab6e-aaf385296955" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/forms/LoginForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/forms/LoginForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/instruments/Pagination.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/instruments/Pagination.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/instruments/buttons/Buttons.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/instruments/buttons/Buttons.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/instruments/buttons/FollowButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/instruments/buttons/FollowButton.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/photos/Photos.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/photos/Photos.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/photos/Photos.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/photos/Photos.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/photos/UploadPhotosPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/photos/UploadPhotosPanel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/Profile.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/profile/Profile.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/Profile.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/profile/ProfileContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/ProfileContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/profile/some-friends/SomeFriendsBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/some-friends/SomeFriendsBlock.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/users/FriendsContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/users/FriendsContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/users/Users.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/users/Users.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/users/Users.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/users/Users.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/oosocial-api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/oosocial-api/api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/reducers/profile-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/profile-reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers/users-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/users-reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/selectors/profile-selector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/selectors/profile-selector.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -150,7 +132,7 @@
       <workItem from="1580882722942" duration="12969000" />
       <workItem from="1581315155216" duration="14571000" />
       <workItem from="1581398022294" duration="25333000" />
-      <workItem from="1581446323906" duration="3619000" />
+      <workItem from="1581446323906" duration="9293000" />
     </task>
     <servers />
   </component>

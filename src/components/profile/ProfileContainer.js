@@ -10,6 +10,7 @@ import {
     getProfileRequest,
     getStatusRequest,
     setStatusRequest,
+    singleProfileFollow, singleProfileUnfollow,
     uploadPhoto,
     uploadProfile
 } from "../../redux/reducers/profile-reducer";
@@ -53,11 +54,11 @@ class ProfileAPI extends React.Component {
     }
 
     render() {
-        let {match, getProfileRequest, getFriendsById, isEdit, ...newProps} = this.props
+        let {match, getProfileRequest, getFriendsById, isEdit, ...newProps} = this.props;
 
         if  (this.props.profileFetch) return (<Preloader />)
         else return <Profile  {...newProps}    isEdit={this.state.editMode}
-                     isOwner={(this.props.isAuth && ( (match.params.userId === this.props.myId) || isEdit ))}/>
+                     isOwner={(this.props.isAuth && ( (match.params.userId == this.props.myId) || isEdit ))}/>
     }
 }
 
@@ -70,6 +71,7 @@ let mapStateToProps = (state) => {
         isAuth: state.auth.isAuth,
 
         profileFetch: state.profile.profileFetch,
+        profileFollowingFetch: state.profile.profileFollowingFetch,
 
         friends: getSomeFriends(state),
         rating: getUserRating(state)
@@ -84,5 +86,7 @@ export default compose(withRouter, connect(mapStateToProps, {
     uploadPhoto,
     getFriendsById,
 
-    beginFollowing
+    singleProfileFollow,
+    singleProfileUnfollow
+
 }))(ProfileAPI)

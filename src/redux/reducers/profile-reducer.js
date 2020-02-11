@@ -1,4 +1,4 @@
-import {profileAPI} from '../../oosocial-api/api'
+import {profileAPI, usersAPI} from '../../oosocial-api/api'
 import {stopSubmit} from 'redux-form'
 
 let initialState = {
@@ -12,6 +12,9 @@ let initialState = {
     profileUpdateFetching: false,
 
     profileFetch: true,
+
+    profileFollowingFetch: false,
+
     isProfileFollow: false
     /*
     posts: [
@@ -28,6 +31,9 @@ const SET_FOLLOW_STATUS = 'social-network/user-profile/SET_FOLLOW_STATUS'
 const UPDATE_PROFILE_FETCHING = 'social-network/user-profile/UPDATE_PROFILE_FETCHING'
 const GET_PROFILE_FETCH_TOGGLE = 'social-network/user-profile/GET_PROFILE_FETCH_TOGGLE'
 
+const SET_PROFILE_FOLLOWING_ENABLED = 'social-network/user-profile/SET_PROFILE_FOLLOWING_ENABLED'
+const SET_PROFILE_FOLLOWING_DISABLED = 'social-network/user-profile/SET_PROFILE_FOLLOWING_DISABLED'
+
 export let profileReducer = (state = initialState, action) => {
 
     switch (action.type) {
@@ -42,13 +48,17 @@ export let profileReducer = (state = initialState, action) => {
 
         case SET_FOLLOW_STATUS:
             return {...state, isProfileFollow: action.isFollow}
+        case SET_PROFILE_FOLLOWING_ENABLED:
+            return {...state, profileFollowingFetch: true}
+        case SET_PROFILE_FOLLOWING_DISABLED:
+            return {...state, profileFollowingFetch: false}
 
         case UPDATE_PROFILE_FETCHING:
             return {...state, profileUpdateFetching: action.isFetching}
 
         case GET_PROFILE_FETCH_TOGGLE:
-            console.log(action.isFetching)
             return {...state, profileFetch: action.isFetching}
+
         default:
             return state;
     }
@@ -155,6 +165,23 @@ export const uploadPhoto = (photo) => async (dispatch) => {
 
 
 /// обработка фолловинга для отдельного профиля
+const setFollowingEnabled = () => { return {type: SET_PROFILE_FOLLOWING_ENABLED} }
+const setFollowingDisabled = () => { return {type: SET_PROFILE_FOLLOWING_DISABLED} }
 
+const singleProfileFollowOrUnfollow = async (id, followMethod, isFollow, dispatch) => {
+    dispatch(setFollowingEnabled())
+    const response = await followMethod(id)
+    if (response.data.resultCode === 0) {
+        dispatch(setFollowStatus(isFollow))
+        dispatch(setFollowingDisabled())
+    }
+}
 
+export const singleProfileFollow = (id) => async (dispatch) => {
+    singleProfileFollowOrUnfollow(id, usersAPI.follow.bind(usersAPI), true, dispatch)
+}
+
+export const singleProfileUnfollow = (id) => async (dispatch) => {
+    singleProfileFollowOrUnfollow(id, usersAPI.unfollow.bind(usersAPI), false, dispatch)
+}
 
