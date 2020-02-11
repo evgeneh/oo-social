@@ -5,7 +5,6 @@ import style from './Photos.module.css';
 import ElementNameHeader from "../profile/element-name-header/ElementNameHeader";
 import UploadPhotosPanel from "./UploadPhotosPanel";
 import ModalPhotoView from "./modal-photo-view/ModalPhotoView";
-import {setImageAsProfilePhoto} from "../../redux/reducers/images-reducer";
 import ModalPhotoViewMenu from "./modal-photo-view/ModalPhotoViewMenu";
 
 
@@ -28,7 +27,6 @@ const Photos = (props) => {
             index = props.photos.length
         return props.photos[index - 1]
     }
-
 
 
     return (

@@ -11,7 +11,8 @@ let initialState = {
 
     profileUpdateFetching: false,
 
-    profileFetch: true
+    profileFetch: true,
+    isProfileFollow: false
     /*
     posts: [
         {text: 'post1', like: 1}, {text: 'post2', like: 2}
@@ -21,6 +22,8 @@ let initialState = {
 const SET_STATUS = 'social-network/user-profile/SET_STATUS'
 const SET_PROFILE = 'social-network/user-profile/SET_PROFILE'
 const SET_PHOTO = 'social-network/user-profile/SET_PHOTO'
+
+const SET_FOLLOW_STATUS = 'social-network/user-profile/SET_FOLLOW_STATUS'
 
 const UPDATE_PROFILE_FETCHING = 'social-network/user-profile/UPDATE_PROFILE_FETCHING'
 const GET_PROFILE_FETCH_TOGGLE = 'social-network/user-profile/GET_PROFILE_FETCH_TOGGLE'
@@ -36,6 +39,10 @@ export let profileReducer = (state = initialState, action) => {
         case SET_PHOTO:
             let newState = {...state, user: {...state.user, photos: action.photos}}
             return newState
+
+        case SET_FOLLOW_STATUS:
+            return {...state, isProfileFollow: action.isFollow}
+
         case UPDATE_PROFILE_FETCHING:
             return {...state, profileUpdateFetching: action.isFetching}
 
@@ -55,15 +62,26 @@ const uploadPhotoSuccess = (photos) => { return {type: SET_PHOTO, photos} }
 
 const uploadProfileFetching = (isFetching) => { return {type: UPDATE_PROFILE_FETCHING, isFetching} }
 
+const setFollowStatus = (isFollow) => { return {type: SET_FOLLOW_STATUS, isFollow} }
+//запрос статуса фолловинга (для зарегистрированных пользователей)
+const getFollowStatus = (id) => async (dispatch) => {
+    const response = await profileAPI.getFollowStatus(id)
+    if (response.data) {
+        dispatch(setFollowStatus(response.data.isFollow))
+    }
+}
 
 const getProfileFetch = (isFetching) => {return {type: GET_PROFILE_FETCH_TOGGLE, isFetching}}
 //тестовый вариант санккриэйтора для локальной БД
-export const getProfileRequest = (id) => async (dispatch) => {
+export const getProfileRequest = (id) => async (dispatch, getState) => {
     dispatch(getProfileFetch(true))
     const response = await profileAPI.getUserProfile(id)
 
     if (response.data)
     {
+        const myId = getState().auth.myId
+        if (myId && (myId !== id)){
+            dispatch(getFollowStatus(id))}
         dispatch(setProfile(response.data))
         dispatch(getProfileFetch(false))
     }
@@ -82,7 +100,7 @@ export const getStatusRequest = (id) => async (dispatch) => {
         dispatch(setStatus(response.data))
 }
 
-
+//
 export const uploadProfile = (profile) => async (dispatch, getState) => {
     //get current user id in state for loading my new profile page
     const myId = getState().auth.myId
@@ -101,7 +119,6 @@ export const uploadProfile = (profile) => async (dispatch, getState) => {
         if (contactError)
         {
             const submitERROR = JSON.parse(`{"${contactError}":"${errMessage}"}`)
-            //dispatch(stopSubmit('updateProfile', submitERROR))
             dispatch(stopSubmit('updateProfile', {"contacts": submitERROR}))
         }
         else
@@ -135,4 +152,9 @@ export const uploadPhoto = (photo) => async (dispatch) => {
         dispatch(stopSubmit("upload_image", {_error: response.data.messages[0] || "Image loading error"}))
     }
 }
+
+
+/// обработка фолловинга для отдельного профиля
+
+
 

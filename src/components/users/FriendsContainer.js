@@ -13,16 +13,21 @@ import withLoginRedirect from "../login-register/LoginRedirectHOC";
 
 const UsersAPI = (props) => {
 
-    useEffect(() => usersUpdate(), [props.match.params.pageNo, props.myId])
+    console.log(props.match.params)
+
+    useEffect(() => usersUpdate(), [props.match.params.pageNo, props.match.params.userId, props.myId])
+
+    let userId = props.match.params.userId ? props.match.params.userId : props.myId
 
     const usersUpdate = () => {
         {
-            props.getFriendsByPage(props.match.params.pageNo)
+
+            props.getFriendsByPage(props.match.params.pageNo, userId)
         }
     }
 
     return  <>
-        {(props.isFetching) ? <Preloader /> : <Users pageName={"friends"} {...props}  />
+        {(props.isFetching) ? <Preloader /> : <Users pageName={"friends"} userId={userId} {...props}  />
     }</>
 
 }

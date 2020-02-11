@@ -1,9 +1,9 @@
-
 .main {
   display: grid;
   justify-content: center;
-  grid-template-columns: 118px 678px ;
+  grid-template-columns: 118px 660px ;
   grid-template-rows: 45px 1fr;
+  grid-column-gap: 15px;
   grid-template-areas:
           "h h"
           "nav body"
@@ -15,10 +15,17 @@
 .sideBar {
   grid-area: nav;
 
-  margin: 1px 1px 1px 9px;
+  margin: 5px 1px 1px 9px;
   padding-bottom: 10px;
 }
 
 .pageBody {
   grid-area: body;
+}
+
+h2{
+  font-size: 13px;
+  color: #45688E;
+  text-decoration: none;
+  margin: 5px 0;
 }

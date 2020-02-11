@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 
 import style from './Photos.module.css';
 
@@ -19,11 +19,11 @@ const UploadPhotosPanel = ({fullName, userId, currentUploading, startUpload}) =>
 
     return (
         <div className={style.imagesControl}>
-            <div>
+            <div className={style.imagesControl__navigation}>
                 <Link to={"/id" + userId} linkName={fullName}/><b>{" >> "}</b>photos
             </div>
 
-            {currentUploading ? <span>Uploading&nbsp;{currentUploading}&nbsp;of&nbsp;{totalUpload}</span> :
+            {currentUploading ? <h2>...uploading&nbsp;{currentUploading}&nbsp;of&nbsp;{totalUpload}</h2> :
 
                 <div className={style.imagesControl__upload}>
                     <Button isNonButton={true}>

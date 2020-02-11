@@ -7,6 +7,8 @@ import {withRouter} from "react-router-dom";
 import Link from "./link/Link";
 
 const Pages = (props) => {
+    const userId = props.userId || "";
+
     let pages = [];
 
     if (props.pagesCount > 5) {
@@ -32,7 +34,7 @@ const Pages = (props) => {
         {pages.map((p) => {
             if (p === '…') return <span key={'…'}> {p} &#9642;</span>
             if (p == props.page) return <span key={p}> <b>{p}</b> &#9642;</span>
-            return <span key={p}> <Link to={ "/" + props.pageName + "/" + p} linkName={p}/> &#9642;</span>
+            return <span key={p}> <Link to={ "/" + props.pageName + userId + "/" + p} linkName={"" + p + " "}/> &#9642;</span>
         })}
     </div>
 

@@ -4,7 +4,7 @@ import {compose} from "redux";
 import {withRouter} from "react-router-dom";
 
 import {getSomeFriends} from "../../redux/selectors/users-selector";
-import {getProfile, getUserRating} from "../../redux/selectors/profile-selector";
+import {getProfileFull, getUserRating} from "../../redux/selectors/profile-selector";
 
 import {
     getProfileRequest,
@@ -18,13 +18,11 @@ import {getFriendsById} from "../../redux/reducers/users-reducer";
 
 import Profile from "./Profile";
 import Preloader from "../instruments/Preloader";
-import withLoginRedirect from "../login-register/LoginRedirectHOC";
 
 
+class ProfileAPI extends React.Component {
 
-class ProfileAPI extends React.Component {//= ({match, getProfile, getStatusRequest, ...props}) => {
-
-     state = {editMode: false}
+    state = {editMode: false}
 
     uploadUserProfile  = () => {
         let uid = this.props.match.params.userId || this.props.myId;
@@ -54,21 +52,18 @@ class ProfileAPI extends React.Component {//= ({match, getProfile, getStatusRequ
             this.setEditMode(true)
     }
 
-    //добавить прелоадер при загрузке профиля?
     render() {
+        let {match, getProfileRequest, getFriendsById, isEdit, ...newProps} = this.props
+
         if  (this.props.profileFetch) return (<Preloader />)
-        else return <Profile friends={this.props.friends} rating={this.props.rating}
-                        user={this.props.user} setStatus={this.props.setStatusRequest} statusText={this.props.statusText}
-                        isEdit={this.state.editMode}
-                        uploadPhoto={this.props.uploadPhoto} uploadProfile={this.props.uploadProfile}
-                        profileUpdateFetching={this.props.profileUpdateFetching}
-                        isOwner={(this.props.isAuth && ( (this.props.match.params.userId == this.props.myId) || this.props.isEdit ))}/>
+        else return <Profile  {...newProps}    isEdit={this.state.editMode}
+                     isOwner={(this.props.isAuth && ( (match.params.userId === this.props.myId) || isEdit ))}/>
     }
 }
 
 let mapStateToProps = (state) => {
     return {
-        user: getProfile(state),
+        user: getProfileFull(state),
         statusText: state.profile.statusText,
         profileUpdateFetching: state.profile.profileUpdateFetching,
         myId: state.auth.myId,
@@ -87,5 +82,7 @@ export default compose(withRouter, connect(mapStateToProps, {
     getStatusRequest,
     uploadProfile,
     uploadPhoto,
-    getFriendsById
+    getFriendsById,
+
+    beginFollowing
 }))(ProfileAPI)

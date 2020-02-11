@@ -38,3 +38,16 @@
 	padding-left: 10px;
 	border-left: solid 1px #EAEEF3;
 }
+
+.leftBlock__profileMenu {
+	padding: 0;
+	margin: 5px 0;
+	list-style: none;
+	text-align: center;
+	border-top: solid 1px #DAE1E8;
+}
+
+.leftBlock__profileMenu li{
+	padding: 5px 0;
+	border-bottom: solid 1px #DAE1E8;
+}

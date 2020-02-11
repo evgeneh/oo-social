@@ -14,27 +14,30 @@
     text-align: center;
 }
 .image__preview img{
-    width: 155px;
+    width: 145px;
     border: solid 4px white;
 }
 
 .image__preview img:hover{
-    width: 155px;
+    width: 145px;
     border: solid 4px #ccc;
 }
 
 .imagesControl {
     display: grid;
     grid-template-columns: 1fr auto;
-    height: 25px;
-    padding-top: 10px;
-    padding-left: 8px;
+    height: 27px;
+    padding: 0 8px;
     background: #eee;
     border-left:  1px solid #EAEEF3;
     border-right: 1px solid #EBF0F4;
     border-bottom: solid 1px #EAEEF3;
 }
+.imagesControl__navigation {
+    padding-top: 7px;
+}
 
 .imagesControl__upload {
-    padding-right: 12px;
+    padding-top: 6px;
+    padding-right: 6px;
 }

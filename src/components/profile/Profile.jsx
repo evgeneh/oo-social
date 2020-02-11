@@ -14,9 +14,10 @@ import {getFilledContactsCount} from "./ProfileAnalysis";
 import FileUpload from "../forms/FileUpload";
 import SomeFriendsBlock from "./some-friends/SomeFriendsBlock";
 import RateProfile from "./rating-counter/RateProfile";
+import FollowButton from "../instruments/buttons/FollowButton";
 
-const LeftBlock = ({imageLarge, userName, isOwner, uploadPhoto, setEditMode, children, rating, friends}) => {
-    let imageSrc = (imageLarge) ? imageLarge : userDefPic
+const LeftBlock = ({user, isOwner, uploadPhoto, setEditMode, rating, friends, beginFollowing}) => {
+    let imageSrc = (user.photos.large) ? user.photos.large : userDefPic
     const handleFileUpload = (event) => {
         if (event.target.files.length)
             uploadPhoto(event.target.files[0])
@@ -25,26 +26,38 @@ const LeftBlock = ({imageLarge, userName, isOwner, uploadPhoto, setEditMode, chi
 
     return (
         <div className={s.leftBlock}>
-            <img src={imageSrc} alt={userName + ' prfile photo'} width='200px'/>
-            {isOwner && <>
+            <img src={imageSrc} alt={user.fullName + ' prfile photo'} width='210px'/>
+            <ul className={s.leftBlock__profileMenu}>
+                {isOwner ?
+                <>
+                    <li>
+                        <FileUpload onUpload={handleFileUpload}>
+                            <Link linkName={"Upload new user photo"}/>
+                        </FileUpload>
+                    </li>
+                    <li>
+                        <Link linkName='Edit my profile' onClick={setEditMode}/>
+                    </li>
 
-                <FileUpload onUpload={handleFileUpload}>
-                    <Link linkName={"Upload new user photo"}/>
-                </FileUpload>
-
-                <Link linkName='Edit profile' onClick={setEditMode}/>
-
-                {children}
-
-            </>}
-            <RateProfile rateValue={rating} />
-            <SomeFriendsBlock text={"friends"} count={friends.totalCount} users={friends.profiles}/>
+                </>
+                  :<>
+                        <li>
+                            <Link linkName={"Send message to " + user.fullName} to={"/dialog" + user.userId}/>
+                        </li>
+                        <li>
+                            <FollowButton isFollow={user.isFollow} isStretched={true} buttonClick={() => { alert(user.userId); beginFollowing(user.userId) }}  />
+                        </li>
+                   </>
+                }
+            </ul>
+            <RateProfile rateValue={rating}/>
+            <SomeFriendsBlock text={"friends"} count={friends.totalCount} users={friends.profiles} pageId={user.userId} />
 
         </div>)
 }
 
 //<div className={s.profilePage}>
-const Profile = ({user, setStatus, statusText, isOwner, uploadPhoto, uploadProfile, isEdit, profileUpdateFetching, friends, rating}) => {
+const Profile = ({user, setStatus, statusText, isOwner, uploadPhoto, uploadProfile, isEdit, profileUpdateFetching, friends, rating, beginFollowing}) => {
 
     let [isProfileEdit, setProfileEdit] = useState(false)
 
@@ -71,7 +84,8 @@ const Profile = ({user, setStatus, statusText, isOwner, uploadPhoto, uploadProfi
     return (
         <ElementNameHeader text={user.fullName} >
             <div className={s.profilePage}>
-                <LeftBlock imageLarge={user.photos.large} userName={user.fullName} isOwner={isOwner} uploadPhoto={uploadPhoto} setEditMode={handleSetMode} friends={friends} rating={rating} />
+                <LeftBlock user={user} isOwner={isOwner} beginFollowing={beginFollowing}
+                           uploadPhoto={uploadPhoto} setEditMode={handleSetMode} friends={friends} rating={rating} />
                 <div className={s.profileData}>
                     {(isProfileEdit && isOwner) ?
                         <UpdateProfileForm onSubmit={profileChangeSubmit} user={user} initialValues={user} onCancel={profileCloseEdit} >

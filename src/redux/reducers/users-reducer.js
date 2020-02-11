@@ -63,11 +63,10 @@ export const usersReducer = (state = initialState, action) => {
     }
 }
 
-    const setFetching = (isFetching) => {return {type:TOGGLE_FETCHING, isFetching}}
-    const setUsers = (users, count) => {return {type: SET_USERS, users, count}}
+const setFetching = (isFetching) => {return {type:TOGGLE_FETCHING, isFetching}}
+const setUsers = (users, count) => {return {type: SET_USERS, users, count}}
 
-
-    export const setCurrentPage = (page) => {return {type: SET_USERS_PAGE, page}}
+export const setCurrentPage = (page) => {return {type: SET_USERS_PAGE, page}}
 
 export const getUsers = (page) => async (dispatch) => {
         dispatch(setFetching(true))
@@ -87,7 +86,8 @@ const setToggleFollowing = (isToggling, id) => { return {type: SET_TOGGLE_FOLLOW
 const setFollowing = (id, isFollow) => { return {type: CHANGE_FOLLOWING_STATUS, id, isFollow}
 }
 
-//
+//общий метод для запроса фолловинга или анфолловинга, передаём метод запроса к api
+//и состояние фолоовинга, которое надо установить в state
 const followOrUnFollow = async (id, followMethod, isFollowing, dispatch) =>  {
     dispatch(setToggleFollowing(true, id))
     // запрос к апи
@@ -113,23 +113,26 @@ export const endFollowing = (id) => {
     }
 }
 
-export const getFriendsByPage = (page) => async (dispatch) => {
-    dispatch(setFetching(true))
-    const response = await usersAPI.getFriends(page)
+
+//--------------------- friends request------------------------------------
+const getFriendsRequest = async (page, id, setFriendsMethod, dispatch) => {
+    const response = await usersAPI.getFriendsById(page, id);
     if (response.data.resultCode === 0)
-    {
-        dispatch(setUsers(response.data.items, response.data.totalCount))
-        dispatch(setFetching(false))
-    }
+        dispatch(setFriendsMethod(response.data.items, response.data.totalCount))
 }
 
 const setFriends = (friends, totalCount) => {return {type: SET_FRIENDS, friends, totalCount}}
 
-export const getFriendsById = (page, id) => async (dispatch) => {
-    const response = await usersAPI.getFriendsById(page, id);
-    if (response.data.resultCode === 0)
-        dispatch(setFriends(response.data.items, response.data.totalCount))
+export const getFriendsByPage = (page, id) => async (dispatch) => {
+    dispatch(setFetching(true))
+    const val = await getFriendsRequest(page, id, setUsers, dispatch);
+    dispatch(setFetching(false))
 }
+
+export const getFriendsById = (page, id) => async (dispatch) => {
+    getFriendsRequest(page, id, setFriends, dispatch);
+}
+
 
 
 

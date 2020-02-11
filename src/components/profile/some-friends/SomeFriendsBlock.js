@@ -11,20 +11,20 @@ import Link from "../../instruments/link/Link";
 
 
 
-const  BadgeSubHeader = ({count, name}) => {
-    const linkName = count + ((count === 1) ? " friend" : " friends");
+const  BadgeSubHeader = ({count, name, link}) => {
+    const linkName = count + " " + name;
 
     return (<div className={style.subBadge}>
-        <Link to={'/friends'} linkName={linkName} />
-        <div className={style.subBadge__all}> <Link to={'/friends'} linkName={'All'} /> </div>
+        <Link to={link} linkName={linkName} />
+        <div className={style.subBadge__all}> <Link to={link} linkName={'All'} /> </div>
     </div>
     )
 }
 
-const SomeFriends = ({users, count}) => {
+const SomeFriends = ({users, count, pageId}) => {
     return (
         <>
-            <BadgeSubHeader count={count} />
+            <BadgeSubHeader count={count} name={(count === 1) ? "friend" : "friends"} link={"/friends" + pageId} />
         <div className={style.someUsers}>
             {
                 users.map(user => {

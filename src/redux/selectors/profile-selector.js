@@ -4,6 +4,22 @@ export const getProfile = (state) => {
     return  state.profile.user;
 }
 
+const getFollowStatus = (state) => {
+    return state.profile.isProfileFollow;
+}
+
+const getMyId = (state) => {
+    return state.auth.myId;
+}
+
+export const getProfileFull = createSelector(getProfile, getFollowStatus, getMyId, (user, followStatus, myId) =>{
+
+    let isFollow = followStatus
+    if ((!user.userId || !myId) || (myId === user.userId))
+        isFollow = false;
+    return {...user, isFollow}
+})
+
 export const getProfileFullName = (state) => {
     return  state.profile.user.fullName;
 }

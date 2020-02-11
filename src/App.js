@@ -49,7 +49,7 @@ const App = ({isInitialized, initApp, isAuth, myId}) => {
                 </>}
                 />
 
-                <Route path='/friends/:pageNo?' render={(props) => (
+                <Route path='/friends:userId?/:pageNo?' render={(props) => (
                         <React.Suspense fallback={<Preloader/>}>
                             <FriendsContainer/>
                         </React.Suspense>

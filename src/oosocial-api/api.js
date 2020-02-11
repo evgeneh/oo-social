@@ -68,9 +68,16 @@ export const profileAPI = {
         return instance.put('profile/', profile)
     },
 
+
+    getFollowStatus(id) {
+        return instance.get('follow/' + id)
+    },
+
     savePhoto(photo) {
         return savePhotoSingle('profile/photo/', photo)
     }
+
+
 }
 
 export const authAPI = {
