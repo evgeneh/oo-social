@@ -4,6 +4,10 @@ const getFriends = (state) => {
     return state.users.friends;
 }
 
+export const getTogglingProfiles = (state) => {
+    return state.users.isToggling;
+}
+
 export const getSomeFriends = createSelector(getFriends, (friends) => {
 
     const users = friends.profiles;

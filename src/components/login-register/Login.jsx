@@ -10,6 +10,11 @@ import Link from "../instruments/link/Link";
 import s from "../forms/Forms.module.css";
 
 const Login = (props) => {
+
+    if (props.isAuth && props.previousLocation && (props.previousLocation !== "/login"))
+        props.history.push(props.previousLocation)
+
+
     const formSubmit = (value) => {
         props.login(value.email, value.password, value.rememberMe)
     }
@@ -33,7 +38,8 @@ const Login = (props) => {
 let mapStateToProps = (state) => {
     return {
         isAuth: state.auth.isAuth,
-        login: state.auth.login
+        login: state.auth.login,
+        previousLocation: state.auth.previousLocation
     }
 }
 

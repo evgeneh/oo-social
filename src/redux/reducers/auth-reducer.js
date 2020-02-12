@@ -7,12 +7,14 @@ let initialState = {
     login: null,
     isAuth: false,
 
-    isNewUserRegistered: false
+    isNewUserRegistered: false,
+    previousLocation: null
 }
 
 const SET_AUTH = "social-network/auth/SET_AUTH"
 const DELETE_AUTH = "social-network/auth/DELETE_AUTH"
 const NEW_USER_REGISTER_SUCCESS = "social-network/auth/NEW_USER_REGISTER_SUCCESS"
+const SET_PREVIOUS_LOCATION = "social-network/auth/SET_PREVIOUS_LOCATION"
 
 export let authReducer = (state = initialState, action) => {
 
@@ -23,13 +25,18 @@ export let authReducer = (state = initialState, action) => {
             return {...initialState}
         case NEW_USER_REGISTER_SUCCESS:
             return {...state, isNewUserRegistered: true}
+        case SET_PREVIOUS_LOCATION:
+            return {...state, previousLocation: action.path}
+
         default:
             return state;
     }
 }
 
-let setAuthParams = (myId, email, login) => { return {type: SET_AUTH, data: {myId, email, login}} }
-let clearAuthParams = () => {return {type: DELETE_AUTH}}
+export const setLocation = (path) => {return {type: SET_PREVIOUS_LOCATION, path }}
+
+const setAuthParams = (myId, email, login) => { return {type: SET_AUTH, data: {myId, email, login}} }
+const clearAuthParams = () => {return {type: DELETE_AUTH}}
 
 //инициализируем приложение, запрашиваем на сервере статус авторизации
 export const getAuthRequest = () => async (dispatch) => {

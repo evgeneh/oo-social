@@ -15,7 +15,6 @@ import FileUpload from "../forms/FileUpload";
 import SomeFriendsBlock from "./some-friends/SomeFriendsBlock";
 import RateProfile from "./rating-counter/RateProfile";
 import FollowButton from "../instruments/buttons/FollowButton";
-import {singleProfileFollow} from "../../redux/reducers/profile-reducer";
 
 const LeftBlock = ({user, isOwner, uploadPhoto, setEditMode, rating, friends, beginFollowing, ...props}) => {
 
@@ -27,7 +26,6 @@ const LeftBlock = ({user, isOwner, uploadPhoto, setEditMode, rating, friends, be
     }
 
     let {singleProfileFollow, singleProfileUnfollow, profileFollowingFetch} = props;
-    console.log(profileFollowingFetch)
 
     const handleFollowUser = () => {
         if (user.isFollow)
@@ -70,7 +68,7 @@ const LeftBlock = ({user, isOwner, uploadPhoto, setEditMode, rating, friends, be
 }
 
 //<div className={s.profilePage}>
-const Profile = ({user, setStatus, statusText, isOwner, uploadProfile, isEdit, profileUpdateFetching, ...props}) => {
+const Profile = ({user, setStatusRequest, statusText, isOwner, uploadProfile, isEdit, profileUpdateFetching, ...props}) => {
 
     let [isProfileEdit, setProfileEdit] = useState(false)
 
@@ -104,7 +102,7 @@ const Profile = ({user, setStatus, statusText, isOwner, uploadProfile, isEdit, p
                     <>
                         <div className={s.userInfo__header}>
                             {user.fullName}
-                            <UserStatus statusText={statusText} setStatus={setStatus} isOwner={isOwner} />
+                            <UserStatus statusText={statusText} setStatus={setStatusRequest} isOwner={isOwner} />
                         </div>
 
                         <UProfileInfo lookingForAJob={user.lookingForAJob} aboutMe={user.aboutMe}

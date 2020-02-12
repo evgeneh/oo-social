@@ -35,14 +35,14 @@ const App = ({isInitialized, initApp, isAuth, myId}) => {
             <div className='pageBody'>
 
                 <Route exact path='/' render={() =>
-                    <LoginRedirectTo conditionU={isAuth} path={"/id" + myId} orPath={"/login"}/>
+                    <LoginRedirectTo conditionU={isAuth} path={"/id" + myId} />
                 }/>
                 <Route exact path='/id:userId?' component={() => <React.Suspense fallback={<Preloader/>}>
                     <ProfileContainer/>
                 </React.Suspense>}/>
 
                 <Route exact path='/edit' component={() => <>
-                    <LoginRedirectTo conditionU={isAuth}/>
+
                     <React.Suspense fallback={<Preloader/>}>
                         < ProfileContainer isEdit={true}/>
                     </React.Suspense>

@@ -1,6 +1,8 @@
 import {usersAPI} from "../../oosocial-api/api";
 import {Arrays} from "../../utils/array";
 
+import {followOrUnFollowG, SET_TOGGLE_FOLLOWING} from './follow-unversal'
+
 const initialState={
     users: [
         { id: 0, name: "home", status: "i'm fattest", followed: false, photos: {small: null, large:null}} ,
@@ -27,8 +29,6 @@ const initialState={
 const TOGGLE_FETCHING = 'social-network/users-search/TOGGLE_FETCHING'
 const SET_USERS = 'social-network/users-search/SET_USERS'
 const SET_USERS_PAGE = 'social-network/users-search/SET_USERS_PAGE'
-
-const SET_TOGGLE_FOLLOWING = 'social-network/users-search/SET_TOGGLE_FOLLOWING'
 const CHANGE_FOLLOWING_STATUS = 'social-network/users-search/CHANGE_FOLLOWING_STATUS'
 
 const SET_FRIENDS = 'social-network/users-search/SET_FRIENDS'
@@ -79,37 +79,20 @@ export const getUsers = (page) => async (dispatch) => {
         }
 }
 
-//add user id to list of just following users
-const setToggleFollowing = (isToggling, id) => { return {type: SET_TOGGLE_FOLLOWING, isToggling, id}}
 
 //set following status for user by id
-const setFollowing = (id, isFollow) => { return {type: CHANGE_FOLLOWING_STATUS, id, isFollow}
-}
-
-//общий метод для запроса фолловинга или анфолловинга, передаём метод запроса к api
-//и состояние фолоовинга, которое надо установить в state
-const followOrUnFollow = async (id, followMethod, isFollowing, dispatch) =>  {
-    dispatch(setToggleFollowing(true, id))
-    // запрос к апи
-    let response = await followMethod(id)
-    if (response.data.resultCode === 0) {
-        //unfollow action createrl
-        dispatch(setFollowing(id, isFollowing))
-        //stop freezing follow button for current user
-        dispatch(setToggleFollowing(false, id))
-
-    }
+const setFollowingStatus = (id, isFollow) => { return {type: CHANGE_FOLLOWING_STATUS, id, isFollow}
 }
 
 export const beginFollowing = (id) => {
     return async (dispatch) => {
-        followOrUnFollow(id, usersAPI.follow.bind(usersAPI), true, dispatch)
+        followOrUnFollowG(id, usersAPI.follow.bind(usersAPI), true, setFollowingStatus, dispatch)
     }
 }
 
 export const endFollowing = (id) => {
     return async (dispatch) => {
-        followOrUnFollow(id, usersAPI.unfollow.bind(usersAPI), false, dispatch)
+        followOrUnFollowG(id, usersAPI.unfollow.bind(usersAPI), false, setFollowingStatus, dispatch)
     }
 }
 

@@ -3,7 +3,6 @@ import style from './Forms.module.css';
 import {reduxForm} from "redux-form";
 
 const FileUpload = (props) => {
-    console.log(props.error);
     return (
         <>
             {props.error}

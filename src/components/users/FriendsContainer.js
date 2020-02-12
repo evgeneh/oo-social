@@ -9,6 +9,7 @@ import Users from "./Users";
 import {beginFollowing, endFollowing, getFriendsByPage, setCurrentPage} from "../../redux/reducers/users-reducer";
 import Preloader from "../instruments/Preloader";
 import withLoginRedirect from "../login-register/LoginRedirectHOC";
+import {getTogglingProfiles} from "../../redux/selectors/users-selector";
 
 
 const UsersAPI = (props) => {
@@ -38,7 +39,7 @@ let mapStateToProps = (state) => {
         users: state.users.users,
         isFetching: state.users.isFetching,
         pageSize: state.users.pageSize,
-        isToggling: state.users.isToggling,
+        isToggling: getTogglingProfiles(state),
         myId: state.auth.myId
     }
 }

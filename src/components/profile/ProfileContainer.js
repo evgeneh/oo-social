@@ -4,7 +4,7 @@ import {compose} from "redux";
 import {withRouter} from "react-router-dom";
 
 import {getSomeFriends} from "../../redux/selectors/users-selector";
-import {getProfileFull, getUserRating} from "../../redux/selectors/profile-selector";
+import {getProfileFollowingFetch, getProfileFull, getUserRating} from "../../redux/selectors/profile-selector";
 
 import {
     getProfileRequest,
@@ -18,7 +18,9 @@ import {
 import {getFriendsById} from "../../redux/reducers/users-reducer";
 
 import Profile from "./Profile";
+
 import Preloader from "../instruments/Preloader";
+import withLoginRedirect from "../login-register/LoginRedirectHOC";
 
 
 class ProfileAPI extends React.Component {
@@ -56,6 +58,7 @@ class ProfileAPI extends React.Component {
     render() {
         let {match, getProfileRequest, getFriendsById, isEdit, ...newProps} = this.props;
 
+
         if  (this.props.profileFetch) return (<Preloader />)
         else return <Profile  {...newProps}    isEdit={this.state.editMode}
                      isOwner={(this.props.isAuth && ( (match.params.userId == this.props.myId) || isEdit ))}/>
@@ -71,14 +74,14 @@ let mapStateToProps = (state) => {
         isAuth: state.auth.isAuth,
 
         profileFetch: state.profile.profileFetch,
-        profileFollowingFetch: state.profile.profileFollowingFetch,
+        profileFollowingFetch: getProfileFollowingFetch(state),
 
         friends: getSomeFriends(state),
         rating: getUserRating(state)
     }
 }
 
-export default compose(withRouter, connect(mapStateToProps, {
+export default compose(withRouter, withLoginRedirect, connect(mapStateToProps, {
     setStatusRequest,
     getProfileRequest,
     getStatusRequest,
