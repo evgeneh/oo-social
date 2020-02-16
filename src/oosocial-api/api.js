@@ -12,7 +12,7 @@ const instance = axios.create({
 //настройка подключения к локальному серверу
 
 const instance = axios.create({
-    baseURL: process.env.REACT_APP_BASE_URL_DEV,
+    baseURL: 'https://oo-server.herokuapp.com/api/',
     withCredentials: true
 });
 
