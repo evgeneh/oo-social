@@ -8,6 +8,7 @@ import ElementNameHeader from "../profile/element-name-header/ElementNameHeader"
 import RegisterForm from "../forms/RegisterForm";
 
 import s from "../forms/Forms.module.css";
+import {LoginWelcomeText} from "./LoginWelcome";
 
 
 const Register = (props) => {
@@ -24,10 +25,10 @@ const Register = (props) => {
         <ElementNameHeader text='registration'>
             <div className={s.formBlock}>
             {(props.isAuth) ?
-                 <span>You have an account and i want to logout first</span> :
+                 <LoginWelcomeText>You have an account and i want to logout first</LoginWelcomeText> :
                 <>
                     <RegisterForm onSubmit={formSubmit} />
-                    <span>I have an account and i want to <NavLink to='/login'>login</NavLink></span>
+                    <LoginWelcomeText>I have an account and i want to <NavLink to='/login'>login</NavLink></LoginWelcomeText>
                 </>
             }
             </div>

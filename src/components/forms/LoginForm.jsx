@@ -25,8 +25,11 @@ const LoginForm = (props) => {
             </div>
             <div>
                 <Field name="rememberMe" component={CheckBox} label='Remember me' reverse={true}/>
+                <div className={s.loginButton + " " + s.loginButton_left}>
+                <a href={"/registration"}><Button type="button" disabled={props.submit}>Register</Button></a>
+                </div>
                 <div className={s.loginButton}>
-                    <Button disabled={props.submit}>Login</Button>
+                    <Button type="submit" disabled={props.submit}>Login</Button>
                 </div>
             </div>
         </form>

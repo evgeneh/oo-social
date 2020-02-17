@@ -41,8 +41,15 @@
 }
 
 .loginButton {
+	padding-top: 5px;
+	margin-right: -8px;
 	display: flex;
 	float: right;
+}
+
+.loginButton_left {
+	display: flex;
+	float: left;
 }
 
 
