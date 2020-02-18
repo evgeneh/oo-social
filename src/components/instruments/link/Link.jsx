@@ -9,6 +9,7 @@ const Link = ({to, linkName, isExternal, onClick, isDisabled}) => {
     if (isDisabled)
         return <span className={s.navLink + " " + s.navLink__disabled} >{linkName}</span>
     if (!to)
+        //for lonks with event not routing
         return  <span className={s.navLink} onClick={onClick}>{linkName}</span>
     if (isExternal){
         let extAddress = to;

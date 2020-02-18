@@ -4,22 +4,10 @@ import style from "./SomeFriendsBlock.module.css"
 import userDefPic from "../../../media/def_usrpic_small.jpg"
 
 import BadgeHeaderHOC from "../Widjet/BadgeHeader";
+import BadgeSubHeader from "../Widjet/BadjeSubHeader";
 
 import {NavLink} from "react-router-dom";
 
-import Link from "../../instruments/link/Link";
-
-
-
-const  BadgeSubHeader = ({count, name, link}) => {
-    const linkName = count + " " + name;
-
-    return (<div className={style.subBadge}>
-        <Link to={link} linkName={linkName} />
-        <div className={style.subBadge__all}> <Link to={link} linkName={'All'} /> </div>
-    </div>
-    )
-}
 
 const SomeFriends = ({users, count, pageId}) => {
     return (

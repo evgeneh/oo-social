@@ -32,17 +32,3 @@
     cursor: pointer;
 }
 
-
-.subBadge {
-    text-align: left;
-    padding: 2px 8px 2px 8px;
-    border-top: solid 1px #ccc;
-    background: #eee;
-    margin-bottom: 2px;
-}
-
-.subBadge__all {
-    text-align: right;
-    float: right;
-
-}

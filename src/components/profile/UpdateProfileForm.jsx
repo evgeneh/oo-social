@@ -22,7 +22,7 @@ const minLength4 = minLength(4);
 const UpdateProfileForm = (props) => {
 
     return (
-        <form onSubmit={props.handleSubmit}>
+        <form onSubmit={props.handleSubmit} >
             <div className={profileStyle.userInfo__header}>
                 <div className={profileStyle.userInfo__header_edited}>
                     <span>Your full name:</span>
@@ -37,18 +37,27 @@ const UpdateProfileForm = (props) => {
             <div>
                 <div className={infoStyle.profileInfo}>
                     <ProfileInfoElem label='About me:'><Field name="aboutMe" component={TextBox}/></ProfileInfoElem>
-                    <ProfileInfoElem label='Looking for a job:'><Field name="lookingForAJob" component="input" type="checkbox"/></ProfileInfoElem>
-                    <ProfileInfoElem label='Professional skills'><Field name="lookingForAJobDescription" component={TextBox} multiline={true}/></ProfileInfoElem>
+                    <ProfileInfoElem label='Looking for a job:'><Field name="lookingForAJob" component="input"
+                                                                       type="checkbox"/></ProfileInfoElem>
+                    <ProfileInfoElem label='Professional skills'><Field name="lookingForAJobDescription"
+                                                                        component={TextBox}
+                                                                        multiline={true}/></ProfileInfoElem>
                 </div>
 
-                <UProfileContacts contacts={props.user.contacts} isEdit={true} text='contacts' count={getFilledContactsCount(props.user.contacts)} />
+                <UProfileContacts contacts={props.user.contacts} isEdit={true} text='contacts'
+                                  count={getFilledContactsCount(props.user.contacts)}/>
 
-                <Link linkName='Cancel' onClick={props.onCancel} />
+
+                    <div className={s.formBlock__events_cancel}>
+                        <Link linkName='Cancel' onClick={props.onCancel}/>
+                    </div>
+                    <div className={s.loginButton + " " + s.loginButton__unshifted}>
+                        <Button>Save changes</Button>
+                    </div>
+
                 {props.error && <div className={s.formError}> {props.error} </div>}
 
-                <div className={s.loginButton}>
-                    <Button>Save changes</Button>
-                </div>
+
             </div>
         </form>
     )

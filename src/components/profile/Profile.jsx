@@ -8,13 +8,15 @@ import UProfileContacts from "./profile-info/ProfileContacts";
 
 import userDefPic from '../../media/def_usrpic.jpg'
 import Link from "../instruments/link/Link";
+import FollowButton from "../instruments/buttons/FollowButton";
 import UpdateProfileForm from "./UpdateProfileForm";
+
 import {getFilledContactsCount} from "./ProfileAnalysis";
 
 import FileUpload from "../forms/FileUpload";
 import SomeFriendsBlock from "./some-friends/SomeFriendsBlock";
 import RateProfile from "./rating-counter/RateProfile";
-import FollowButton from "../instruments/buttons/FollowButton";
+import Wall from "./wall/Wall";
 
 const LeftBlock = ({user, isOwner, uploadPhoto, setEditMode, rating, friends, beginFollowing, ...props}) => {
 
@@ -108,7 +110,9 @@ const Profile = ({user, setStatusRequest, statusText, isOwner, uploadProfile, is
                         <UProfileInfo lookingForAJob={user.lookingForAJob} aboutMe={user.aboutMe}
                                   description={user.lookingForAJobDescription} />
 
-                        <UProfileContacts text='contacts' contacts={user.contacts} count={getFilledContactsCount(user.contacts)}/>
+                        <UProfileContacts text='Contacts' contacts={user.contacts} count={getFilledContactsCount(user.contacts)}/>
+
+                        <Wall text={"Wall"} isAuth={true} pageId={user.userId} count={14} />
                     </>
                     }
 

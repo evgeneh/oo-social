@@ -2,15 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd2ca76c-d9c0-4f9e-ab6e-aaf385296955" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/login-register/LoginWelcome.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/forms/AddPostForm.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/profile/Widjet/BadjeSubHeader.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/profile/wall/Wall.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/forms/Forms.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/forms/Forms.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/forms/LoginForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/forms/LoginForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/login-register/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login-register/Login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/login-register/Register.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login-register/Register.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/oosocial-api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/oosocial-api/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/instruments/link/Link.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/instruments/link/Link.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/Profile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/Profile.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/Profile.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/UpdateProfileForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/UpdateProfileForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/some-friends/SomeFriendsBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/some-friends/SomeFriendsBlock.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/some-friends/SomeFriendsBlock.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/some-friends/SomeFriendsBlock.module.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +36,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/login-register" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/forms" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -42,19 +46,19 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\270120\oo-social\src\components\login-register" />
-      <recent name="F:\old-ontach\src\components\photos\modal-photo-view" />
-      <recent name="F:\old-ontach\src\components\login-register" />
-      <recent name="F:\old-ontach\src\components\photos" />
-      <recent name="F:\old-ontach\src\redux\selectors" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\old-ontach\src\components\photos\modal-photo-view" />
       <recent name="F:\old-ontach\src\components\profile\some-friends" />
       <recent name="F:\old-ontach\src\components\instruments" />
       <recent name="F:\old-ontach\src" />
       <recent name="F:\old-ontach\src\components\profile" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\270120\oo-social\src\components\forms" />
+      <recent name="E:\270120\oo-social\src\components\profile\Wall" />
+      <recent name="E:\270120\oo-social\src\components\login-register" />
+      <recent name="F:\old-ontach\src\components\photos\modal-photo-view" />
+      <recent name="F:\old-ontach\src\components\login-register" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -158,7 +162,8 @@
       <workItem from="1581538371837" duration="1134000" />
       <workItem from="1581885269749" duration="2148000" />
       <workItem from="1581951842366" duration="333000" />
-      <workItem from="1581957789807" duration="12700000" />
+      <workItem from="1581957789807" duration="14255000" />
+      <workItem from="1582050294817" duration="9501000" />
     </task>
     <servers />
   </component>
