@@ -21,13 +21,14 @@ import Profile from "./Profile";
 
 import Preloader from "../instruments/Preloader";
 import withLoginRedirect from "../login-register/LoginRedirectHOC";
+import Wall from "./wall/Wall";
 
 
 class ProfileAPI extends React.Component {
 
     state = {editMode: false}
 
-    uploadUserProfile  = () => {
+    uploadUserProfile = () => {
         let uid = this.props.match.params.userId || this.props.myId;
         this.props.getStatusRequest(uid);
         this.props.getProfileRequest(uid);
@@ -35,7 +36,7 @@ class ProfileAPI extends React.Component {
     }
 
     setEditMode = (mode) => {
-         this.setState({editMode: mode || false})
+        this.setState({editMode: mode || false})
     }
 
     componentDidMount() {
@@ -45,13 +46,13 @@ class ProfileAPI extends React.Component {
 
     componentDidUpdate(prevProps, prevState, snapshot) {
 
-        if (prevProps.match.params.userId  != this.props.match.params.userId )
+        if (prevProps.match.params.userId != this.props.match.params.userId)
             this.uploadUserProfile()
 
-        if (prevProps.profileUpdateFetching  && ! this.props.profileUpdateFetching)
+        if (prevProps.profileUpdateFetching && !this.props.profileUpdateFetching)
             this.setEditMode(false)
 
-        if (! prevProps.profileUpdateFetching  &&  this.props.profileUpdateFetching)
+        if (!prevProps.profileUpdateFetching && this.props.profileUpdateFetching)
             this.setEditMode(true)
     }
 
@@ -59,9 +60,12 @@ class ProfileAPI extends React.Component {
         let {match, getProfileRequest, getFriendsById, isEdit, ...newProps} = this.props;
 
 
-        if  (this.props.profileFetch) return (<Preloader />)
-        else return <Profile  {...newProps}    isEdit={this.state.editMode}
-                     isOwner={(this.props.isAuth && ( (match.params.userId == this.props.myId) || isEdit ))}/>
+        if (this.props.profileFetch) return (<Preloader/>)
+        else return (
+            <Profile  {...newProps} isEdit={this.state.editMode}
+                      isOwner={(this.props.isAuth && ((match.params.userId == this.props.myId) || isEdit))}>
+                <Wall text={"Wall"} isAuth={true} pageId={newProps.userId} count={14}/>
+            </Profile>)
     }
 }
 

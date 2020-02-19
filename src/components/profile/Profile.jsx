@@ -112,7 +112,7 @@ const Profile = ({user, setStatusRequest, statusText, isOwner, uploadProfile, is
 
                         <UProfileContacts text='Contacts' contacts={user.contacts} count={getFilledContactsCount(user.contacts)}/>
 
-                        <Wall text={"Wall"} isAuth={true} pageId={user.userId} count={14} />
+                        {props.children}
                     </>
                     }
 
@@ -121,5 +121,5 @@ const Profile = ({user, setStatusRequest, statusText, isOwner, uploadProfile, is
         </ElementNameHeader>
     )
 }
-
+//<Wall text={"Wall"} isAuth={true} pageId={user.userId} count={14} />
 export default Profile;

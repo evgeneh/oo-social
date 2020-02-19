@@ -2,19 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd2ca76c-d9c0-4f9e-ab6e-aaf385296955" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/forms/AddPostForm.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/profile/Widjet/BadjeSubHeader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/profile/wall/Wall.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/reducers/wall-reducer.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/forms/Forms.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/forms/Forms.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/instruments/link/Link.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/instruments/link/Link.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/Profile.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/profile/Profile.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/Profile.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/profile/UpdateProfileForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/UpdateProfileForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/profile/some-friends/SomeFriendsBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/some-friends/SomeFriendsBlock.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/profile/some-friends/SomeFriendsBlock.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/some-friends/SomeFriendsBlock.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/ProfileContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/ProfileContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducers/wall-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/wall-reducer.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,29 +29,30 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/forms" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/redux/reducers" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/react-scripts" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\270120\oo-social\src\redux\reducers" />
+      <recent name="E:\270120\oo-social\src\components\forms" />
+      <recent name="E:\270120\oo-social\src\components\profile\Wall" />
+      <recent name="E:\270120\oo-social\src\components\login-register" />
+      <recent name="F:\old-ontach\src\components\photos\modal-photo-view" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\old-ontach\src\components\photos\modal-photo-view" />
       <recent name="F:\old-ontach\src\components\profile\some-friends" />
       <recent name="F:\old-ontach\src\components\instruments" />
       <recent name="F:\old-ontach\src" />
       <recent name="F:\old-ontach\src\components\profile" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\270120\oo-social\src\components\forms" />
-      <recent name="E:\270120\oo-social\src\components\profile\Wall" />
-      <recent name="E:\270120\oo-social\src\components\login-register" />
-      <recent name="F:\old-ontach\src\components\photos\modal-photo-view" />
-      <recent name="F:\old-ontach\src\components\login-register" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -73,7 +67,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Jest.+++ reducer for ADD_INPUT">
+    <configuration name="+++ reducer for ADD_INPUT" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/redux/reducers/wall-reducer.test.js" />
+      <test-names>
+        <test-name value="+++ reducer for ADD_INPUT" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <configuration name="deploy" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -86,6 +93,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.+++ reducer for ADD_INPUT" />
         <item itemvalue="npm.deploy" />
       </list>
     </recent_temporary>
@@ -163,7 +171,8 @@
       <workItem from="1581885269749" duration="2148000" />
       <workItem from="1581951842366" duration="333000" />
       <workItem from="1581957789807" duration="14255000" />
-      <workItem from="1582050294817" duration="9501000" />
+      <workItem from="1582050294817" duration="11911000" />
+      <workItem from="1582140676380" duration="9937000" />
     </task>
     <servers />
   </component>
