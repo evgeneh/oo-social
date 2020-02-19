@@ -8,7 +8,7 @@ const UProfileInfo = ({aboutMe, lookingForAJob, description}) => {
         <div className={s.profileInfo}>
                 <ProfileInfoElem label='About me:'>{aboutMe}</ProfileInfoElem>
                 <ProfileInfoElem label='Looking for a job:'> {(lookingForAJob)?'Yes':'No'}</ProfileInfoElem>
-                <ProfileInfoElem label='Professional skills'>{description} </ProfileInfoElem>
+                <ProfileInfoElem label='Professional skills:'>{description} </ProfileInfoElem>
         </div>
     )
 }
