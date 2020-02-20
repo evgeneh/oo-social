@@ -1,5 +1,3 @@
-import {usersAPI} from "../../oosocial-api/api";
-
 
 const initialState={
     userId: 2, //id of wall owner, post owner id can equals with wall owner
@@ -37,6 +35,12 @@ const setFetching = (isFetching) => {return {type: TOGGLE_FETCHING, isFetching}}
 const setPosts = (posts, count) => {return {type: SET_POSTS, posts, count}}
 
 export const addNewPost = post =>{ return {type: ADD_NEW_POST, post}}
+
+const fakePost = { postId: 6, date: Date.now(), owner: {userId: 2, photo: "https://s5o.ru/storage/simple/ru/edt/74/81/14/76/rue94254f3c41.jpg", fullName: "Vazgen Sh"}}
+
+export const AddNewPostRequest = (text) => async (dispatch) => {
+    let post = await setTimeout( () =>{  dispatch(addNewPost( {...fakePost, text: text} ))}, 1000 )
+}
 
 
 

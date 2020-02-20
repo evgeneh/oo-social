@@ -44,4 +44,10 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default compose(withRouter, connect(mapStateToProps, {getPhotosRequest, getProfileRequest, uploadPhotosRequest, setImageAsProfilePhoto, deletePhoto})) (PhotosContainer)
+export default compose(withRouter, connect(mapStateToProps, {
+    getPhotosRequest,
+    getProfileRequest,
+    uploadPhotosRequest,
+    setImageAsProfilePhoto,
+    deletePhoto
+}))(PhotosContainer)

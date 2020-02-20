@@ -35,7 +35,6 @@ const PostFooter = styled.div`
 const SinglePost = ({post}) => {
     const options = { year: 'numeric', month: 'long', day: 'numeric' ,  hour12: false, hour: 'numeric', minute: 'numeric'};
     const date = (new Date(post.date)).toLocaleString("en-Us", options)
-
     return (
         <WallPost>
             <div>

@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd2ca76c-d9c0-4f9e-ab6e-aaf385296955" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/profile/wall/SinglePost.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/selectors/wall-selector.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/forms/PostAddForm.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/forms/AddPostForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/forms/FileUploadForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/photos/PhotosContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/photos/PhotosContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/profile/ProfileContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/ProfileContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/wall/SinglePost.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/wall/SinglePost.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/profile/wall/Wall.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/wall/Wall.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/selectors/profile-selector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/selectors/profile-selector.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducers/wall-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/wall-reducer.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,11 +43,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\270120\oo-social\src\components\forms" />
       <recent name="F:\old-ontach\src\components\photos\modal-photo-view" />
       <recent name="F:\old-ontach\src\components\profile\some-friends" />
       <recent name="F:\old-ontach\src\components\instruments" />
       <recent name="F:\old-ontach\src" />
-      <recent name="F:\old-ontach\src\components\profile" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\270120\oo-social\src\components\profile\wall" />
@@ -174,7 +175,7 @@
       <workItem from="1581957789807" duration="14255000" />
       <workItem from="1582050294817" duration="11911000" />
       <workItem from="1582140676380" duration="10143000" />
-      <workItem from="1582199017050" duration="13544000" />
+      <workItem from="1582199017050" duration="20986000" />
     </task>
     <servers />
   </component>

@@ -8,23 +8,26 @@ import BadgeHeaderHOC from "../Widjet/BadgeHeader";
 import BadgeSubHeader from "../Widjet/BadjeSubHeader";
 
 import SinglePost from "./SinglePost";
+import PostAddForm from "../../forms/PostAddForm";
 
-
-const Wall = ({posts, count, pageId}) => {
+const Wall = ({posts, count, pageId, addPost}) => {
 
     let [isOpenTextBox, setTextBoxStatus] = useState(false)
 
     const handleShowTextBox = () =>  setTextBoxStatus(true)
 
+    const handleAddPost = (value) => {
+        addPost(value.text)
+        setTextBoxStatus(false)
+    }
+
     return (
         <>
-            <BadgeSubHeader count={count} name={(count === 1) ? "post" : "posts"} link={"/wall" + pageId} >
+            <BadgeSubHeader count={count} name={(count === 1) ? "post" : "posts"} link={"/wall?id=" + pageId} >
                 <Link onClick={handleShowTextBox} linkName={"Write New Post"} />
             </BadgeSubHeader>
             {isOpenTextBox &&
-                <>
-                    {" i can edit"}
-                    </>
+                    <PostAddForm onSubmit={handleAddPost}/>
             }
             {
                 posts.map( (post) => {
@@ -39,7 +42,9 @@ Wall.propTypes = {
     posts: PropTypes.array,
     count: PropTypes.number,
     isAuth: PropTypes.bool,
-    pageId: PropTypes.number
+    pageId: PropTypes.number,
+
+    addPost: PropTypes.func
 }
 
 export  default BadgeHeaderHOC(Wall)

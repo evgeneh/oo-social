@@ -17,6 +17,7 @@ import {
 } from "../../redux/reducers/profile-reducer";
 
 import {getFriendsById} from "../../redux/reducers/users-reducer";
+import {AddNewPostRequest} from "../../redux/reducers/wall-reducer";
 
 import Profile from "./Profile";
 
@@ -24,6 +25,7 @@ import Preloader from "../instruments/Preloader";
 import Wall from "./wall/Wall";
 
 import withLoginRedirect from "../login-register/LoginRedirectHOC";
+
 
 class ProfileAPI extends React.Component {
 
@@ -68,8 +70,9 @@ class ProfileAPI extends React.Component {
         else return (
             <Profile  {...newProps} isEdit={this.state.editMode}
                       isOwner={(this.props.isAuth && ((match.params.userId == this.props.myId) || isEdit))}>
-                <Wall text={"Wall"} isAuth={true} pageId={newProps.userId}
+                <Wall text={"Wall"} isAuth={true} pageId={newProps.user.userId}
                       posts={this.props.posts} count={this.props.postsCount}
+                      addPost={this.props.AddNewPostRequest}
                 />
             </Profile>)
     }
@@ -103,6 +106,8 @@ export default compose(withRouter, withLoginRedirect, connect(mapStateToProps, {
     getFriendsById,
 
     singleProfileFollow,
-    singleProfileUnfollow
+    singleProfileUnfollow,
+
+    AddNewPostRequest
 
 }))(ProfileAPI)
