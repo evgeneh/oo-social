@@ -5,6 +5,7 @@ import {withRouter} from "react-router-dom";
 
 import {getSomeFriends} from "../../redux/selectors/users-selector";
 import {getProfileFollowingFetch, getProfileFull, getUserRating} from "../../redux/selectors/profile-selector";
+import {getSomeWallPosts} from "../../redux/selectors/wall-selector";
 
 import {
     getProfileRequest,
@@ -20,9 +21,9 @@ import {getFriendsById} from "../../redux/reducers/users-reducer";
 import Profile from "./Profile";
 
 import Preloader from "../instruments/Preloader";
-import withLoginRedirect from "../login-register/LoginRedirectHOC";
 import Wall from "./wall/Wall";
 
+import withLoginRedirect from "../login-register/LoginRedirectHOC";
 
 class ProfileAPI extends React.Component {
 
@@ -32,7 +33,10 @@ class ProfileAPI extends React.Component {
         let uid = this.props.match.params.userId || this.props.myId;
         this.props.getStatusRequest(uid);
         this.props.getProfileRequest(uid);
+
         this.props.getFriendsById(1, uid);
+
+        //this.props.getWallByRequest(uid)
     }
 
     setEditMode = (mode) => {
@@ -64,7 +68,9 @@ class ProfileAPI extends React.Component {
         else return (
             <Profile  {...newProps} isEdit={this.state.editMode}
                       isOwner={(this.props.isAuth && ((match.params.userId == this.props.myId) || isEdit))}>
-                <Wall text={"Wall"} isAuth={true} pageId={newProps.userId} count={14}/>
+                <Wall text={"Wall"} isAuth={true} pageId={newProps.userId}
+                      posts={this.props.posts} count={this.props.postsCount}
+                />
             </Profile>)
     }
 }
@@ -81,7 +87,10 @@ let mapStateToProps = (state) => {
         profileFollowingFetch: getProfileFollowingFetch(state),
 
         friends: getSomeFriends(state),
-        rating: getUserRating(state)
+        rating: getUserRating(state),
+
+        posts: getSomeWallPosts(state),
+        postsCount: state.wall.totalCount
     }
 }
 

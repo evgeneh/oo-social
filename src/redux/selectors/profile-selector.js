@@ -51,7 +51,7 @@ export const getUserRating = createSelector(getProfile, (user) => {
         filledParams++;
     totalParams++;
 
-    Object.keys(user.contacts).map((key) => {
+    Object.keys(user.contacts).forEach((key) => {
         if (user.contacts[key]) filledParams++;
         totalParams++;
     })

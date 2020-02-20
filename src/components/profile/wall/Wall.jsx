@@ -7,14 +7,14 @@ import Link from "../../instruments/link/Link";
 import BadgeHeaderHOC from "../Widjet/BadgeHeader";
 import BadgeSubHeader from "../Widjet/BadjeSubHeader";
 
+import SinglePost from "./SinglePost";
 
-const Wall = ({posts, count, isAuth, pageId}) => {
+
+const Wall = ({posts, count, pageId}) => {
 
     let [isOpenTextBox, setTextBoxStatus] = useState(false)
 
     const handleShowTextBox = () =>  setTextBoxStatus(true)
-
-
 
     return (
         <>
@@ -25,6 +25,11 @@ const Wall = ({posts, count, isAuth, pageId}) => {
                 <>
                     {" i can edit"}
                     </>
+            }
+            {
+                posts.map( (post) => {
+                    return <SinglePost key={post.postId} post={post} />
+                })
             }
         </>
     )

@@ -9,10 +9,14 @@ import {imagesReducer} from "./reducers/images-reducer";
 import {usersReducer} from "./reducers/users-reducer";
 import {initReducer} from "./reducers/init-reducer";
 import {authReducer} from "./reducers/auth-reducer";
+import {wallReducer} from "./reducers/wall-reducer";
 
 
-const rootReducer = combineReducers({app: initReducer, profile: profileReducer, auth: authReducer, form: formReducer,
-                                            requests: requestsReducer, users: usersReducer, photos: imagesReducer})
+const rootReducer = combineReducers({
+    app: initReducer, profile: profileReducer, auth: authReducer, form: formReducer,
+    requests: requestsReducer, users: usersReducer, photos: imagesReducer,
+    wall: wallReducer
+})
 
 let store = createStore(rootReducer, applyMiddleware(thunkMiddleware));
 
