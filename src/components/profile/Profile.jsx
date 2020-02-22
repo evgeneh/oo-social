@@ -14,8 +14,8 @@ import UpdateProfileForm from "./UpdateProfileForm";
 import {getFilledContactsCount} from "./ProfileAnalysis";
 
 import FileUpload from "../forms/FileUpload";
-import SomeFriendsBlock from "./some-friends/SomeFriendsBlock";
-import SomePhotosBlock from "./some-friends/SomePhotosBlock";
+import SomeFriendsBlock from "./some-of-profile/SomeFriendsBlock";
+import SomePhotosBlock from "./some-of-profile/SomePhotosBlock";
 import RateProfile from "./rating-counter/RateProfile";
 
 

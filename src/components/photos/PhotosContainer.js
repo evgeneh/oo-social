@@ -8,7 +8,7 @@ import {
     getPhotosRequest,
     uploadPhotosRequest,
     setImageAsProfilePhoto,
-    deletePhoto
+    deletePhoto, updateImageDescription
 } from "../../redux/reducers/images-reducer";
 import {getProfileRequest} from "../../redux/reducers/profile-reducer";
 
@@ -28,7 +28,7 @@ const PhotosContainer = ({myId, getPhotosRequest, getProfileRequest, isAuth, ...
         getPhotosRequest(userId);
     }
 
-    return <Photos {...props} userId={userId} isOwner={isAuth && (userId === myId)} />
+    return <Photos {...props} userId={userId} isOwner={isAuth && (parseInt(userId) === parseInt(myId))} />
 }
 
 const mapStateToProps = (state) => {
@@ -49,5 +49,6 @@ export default compose(withRouter, connect(mapStateToProps, {
     getProfileRequest,
     uploadPhotosRequest,
     setImageAsProfilePhoto,
-    deletePhoto
+    deletePhoto,
+    updateImageDescription
 }))(PhotosContainer)

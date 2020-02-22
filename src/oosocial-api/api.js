@@ -113,6 +113,9 @@ export const mediaAPI = {
 
     deletePhoto(id){
         return instance.delete('photo?id=' + id)
+    },
+    updateImage(id, description) {
+        return instance.post('photo/update', {id, description})
     }
 }
 

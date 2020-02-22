@@ -14,32 +14,49 @@ import {dateParse} from "../../../utils/date";
 const SomePhotosBlock = styled.div`
     display: grid;
     grid-gap: 5px;
-    grid-template-columns: 90px 1fr;
+    grid-template-columns: 90px auto;
 `;
 
 const DateText = styled.span`
     color:grey
 `
 
+const PictureTitle = styled.div`
+    word-break: break-word;
+    font-weight: bold;
+`
+
+const Description = ({photo}) => {
+    return(
+    (photo.description.length > 51) ?
+
+        <>{photo.description.slice(0, 50)}&hellip;</>
+        :
+        <>{photo.description}</>
+    )
+}
+
 //show some photos on profile page
 const SomePhotos = ({photos, count, pageId}) => {
+
     return (
         <>
             <BadgeSubHeader count={count} name={(count === 1) ? "photo" : "photos"} link={"/photos" + pageId} />
         <SomePhotosBlock >
             {
                 photos.map(photo => {
-                    return (<>
-                        <NavLink to={'/photos' + pageId}  key={pageId}>
+                    return (
+                        <>
+                        <NavLink key={photo.id} to={'/photos' + pageId}  key={pageId}>
                                 <img
                                     width={"80px"}
                                     src={photo.preview}
                                     alt={`id ${photo.userId} photo`}/>
 
                          </NavLink>
-                         <div>
-                             <b>{photo.description}</b>
-                             <DateText>{ dateParse.toStrings(photo.date) }</DateText>
+                         <div key={photo.id} >
+                             <PictureTitle><Description photo={photo}/></PictureTitle> <br/>
+                             <DateText>Uploaded { dateParse.toStrings(photo.date) }</DateText>
                          </div>
                      </>
                     )

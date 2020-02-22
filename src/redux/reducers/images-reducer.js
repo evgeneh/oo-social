@@ -1,5 +1,6 @@
 import {mediaAPI} from "../../oosocial-api/api";
 import {stopSubmit} from "redux-form";
+import {Arrays} from "../../utils/array";
 
 let initialState = {
     items: [],
@@ -11,6 +12,7 @@ let initialState = {
 const SET_PHOTOS = 'social-network/user-photos/SET_PHOTOS';
 const SET_IMAGE_ORDER = 'social-network/user-photos/SET_IMAGE_ORDER';
 const TOGGLE_PHOTO_SET = 'social-network/user-photos/TOGGLE_PHOTO_SET';
+const ADD_DESCRIPTION = 'social-network/user-photos/ADD_DESCRIPTION'
 
 export const imagesReducer = (state = initialState, action) => {
     switch (action.type) {
@@ -22,6 +24,9 @@ export const imagesReducer = (state = initialState, action) => {
             return {...state, currentUploading: action.order}
         case TOGGLE_PHOTO_SET:
             return {...state, isProfilePhotoSet: action.togglePhotoSet}
+        case ADD_DESCRIPTION:
+            return { ...state, items:  Arrays.findOneAndUpdate(state.items, "id", action.id, {description: action.description})
+        }
         default:
             return state;
     }
@@ -74,6 +79,15 @@ export const deletePhoto  = (id) => async (dispatch) => {
         dispatch(setProfilePhoto(false))}
 }
 
+const addImageDescription = (id, description) => {return {type: ADD_DESCRIPTION, id, description}}
+
+export const updateImageDescription = (id, description) => async (dispatch) =>{
+    const response = await mediaAPI.updateImage(id, description)
+    if (response.data.resultCode === 0)
+    {
+        dispatch(addImageDescription(id, description))
+    }
+}
 
 
 

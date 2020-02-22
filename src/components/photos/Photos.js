@@ -28,7 +28,6 @@ const Photos = (props) => {
         return props.photos[index - 1]
     }
 
-    console.log(props.isOwner)
     return (
         <ElementNameHeader text={`id${props.userId} photos, total: ${props.totalCount}`}>
 
@@ -50,7 +49,8 @@ const Photos = (props) => {
                             showSinglePhoto={showSinglePhoto} indexImg={indexImgModal} >
 
                 <ModalPhotoViewMenu image={getPhoto()} isOwner={props.isOwner} deletePhoto={props.deletePhoto}
-                                    setAsProfile={props.setImageAsProfilePhoto} isDisabled={props.isProfilePhotoSet} />
+                                    setAsProfile={props.setImageAsProfilePhoto} isDisabled={props.isProfilePhotoSet}
+                                    setDescriptionReq={props.updateImageDescription}/>
 
             </ModalPhotoView>
             }

@@ -50,9 +50,12 @@
 .imageModal_menu__right{
     text-align: right;
 }
+.imageModal_menu__right input{
+    width: 90%;
+}
 
 .imageModal_menu {
-    padding-top: 8px;
+    padding-top: 10px;
     width: 100%;
     border-top: 1px solid #EBF0F4;
     display: grid;
