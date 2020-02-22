@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd2ca76c-d9c0-4f9e-ab6e-aaf385296955" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/forms/PostAddForm.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/forms/AddPostForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/forms/FileUploadForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/photos/PhotosContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/photos/PhotosContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/Profile.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/profile/ProfileContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/ProfileContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/profile/wall/SinglePost.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/wall/SinglePost.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/profile/wall/Wall.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/wall/Wall.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/oosocial-api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/oosocial-api/api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/reducers/wall-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/wall-reducer.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -175,7 +173,8 @@
       <workItem from="1581957789807" duration="14255000" />
       <workItem from="1582050294817" duration="11911000" />
       <workItem from="1582140676380" duration="10143000" />
-      <workItem from="1582199017050" duration="20986000" />
+      <workItem from="1582199017050" duration="21183000" />
+      <workItem from="1582279437464" duration="12179000" />
     </task>
     <servers />
   </component>

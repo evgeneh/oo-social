@@ -17,7 +17,7 @@ const Wall = ({posts, count, pageId, addPost}) => {
     const handleShowTextBox = () =>  setTextBoxStatus(true)
 
     const handleAddPost = (value) => {
-        addPost(value.text)
+        addPost(pageId, value.text)
         setTextBoxStatus(false)
     }
 

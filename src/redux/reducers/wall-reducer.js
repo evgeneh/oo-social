@@ -1,8 +1,11 @@
+import {wallAPI} from "../../oosocial-api/api";
 
 const initialState={
     userId: 2, //id of wall owner, post owner id can equals with wall owner
     posts: [
-        { postId: 1, date: "2020-02-10T22:06:17.762Z", text: "Hello, my friend\n:)", owner: {userId: 2, photo: "https://s5o.ru/storage/simple/ru/edt/82/57/c6/1b/ruef2b9f9c218.jpg", fullName: "Eldar Sh"} }
+        { postId: 1, date: "2020-02-10T22:06:17.762Z", text: "Hello, my friend\n:)",
+            owner: {userId: 2, photo: "https://s5o.ru/storage/simple/ru/edt/82/57/c6/1b/ruef2b9f9c218.jpg",
+                fullName: "Eldar Sh"} }
     ],
     totalCount: 14,
 
@@ -32,16 +35,28 @@ export const wallReducer = (state = initialState, action) => {
 
 const setFetching = (isFetching) => {return {type: TOGGLE_FETCHING, isFetching}}
 
-const setPosts = (posts, count) => {return {type: SET_POSTS, posts, count}}
+const setPosts = (posts, count, userId) => {return {type: SET_POSTS, posts, count, userId}}
 
 export const addNewPost = post =>{ return {type: ADD_NEW_POST, post}}
 
-const fakePost = { postId: 6, date: Date.now(), owner: {userId: 2, photo: "https://s5o.ru/storage/simple/ru/edt/74/81/14/76/rue94254f3c41.jpg", fullName: "Vazgen Sh"}}
 
-export const AddNewPostRequest = (text) => async (dispatch) => {
-    let post = await setTimeout( () =>{  dispatch(addNewPost( {...fakePost, text: text} ))}, 1000 )
+
+export const AddNewPostRequest = (id, text) => async (dispatch) => {
+    let response = await wallAPI.addPost(id, text)
+    if (response.data.resultCode === 0) {
+        dispatch(addNewPost(response.data.post))
+    }
 }
 
+export const getWallRequest = (id) => async (dispatch) => {
+    dispatch(setFetching(true))
+    let response = await wallAPI.getWall(id)
+    if (response.data.resultCode === 0)
+    {
+        dispatch(setPosts(response.data.data.posts, response.data.data.totalCount, response.data.data.userId))
+    }
+    dispatch(setFetching(false))
+}
 
 
 

@@ -17,7 +17,7 @@ import {
 } from "../../redux/reducers/profile-reducer";
 
 import {getFriendsById} from "../../redux/reducers/users-reducer";
-import {AddNewPostRequest} from "../../redux/reducers/wall-reducer";
+import {AddNewPostRequest, getWallRequest} from "../../redux/reducers/wall-reducer";
 
 import Profile from "./Profile";
 
@@ -38,7 +38,7 @@ class ProfileAPI extends React.Component {
 
         this.props.getFriendsById(1, uid);
 
-        //this.props.getWallByRequest(uid)
+        this.props.getWallRequest(uid)
     }
 
     setEditMode = (mode) => {
@@ -108,6 +108,6 @@ export default compose(withRouter, withLoginRedirect, connect(mapStateToProps, {
     singleProfileFollow,
     singleProfileUnfollow,
 
-    AddNewPostRequest
-
+    AddNewPostRequest,
+    getWallRequest
 }))(ProfileAPI)

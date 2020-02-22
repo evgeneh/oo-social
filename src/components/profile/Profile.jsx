@@ -16,7 +16,6 @@ import {getFilledContactsCount} from "./ProfileAnalysis";
 import FileUpload from "../forms/FileUpload";
 import SomeFriendsBlock from "./some-friends/SomeFriendsBlock";
 import RateProfile from "./rating-counter/RateProfile";
-import Wall from "./wall/Wall";
 
 const LeftBlock = ({user, isOwner, uploadPhoto, setEditMode, rating, friends, beginFollowing, ...props}) => {
 

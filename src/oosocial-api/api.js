@@ -115,3 +115,13 @@ export const mediaAPI = {
         return instance.delete('photo?id=' + id)
     }
 }
+
+export const wallAPI = {
+    getWall(id) {
+        return instance.get('/wall?id=' + id)
+    },
+
+    addPost(userId, text) {
+       return instance.post('/wall', {userId, text})
+    }
+}
