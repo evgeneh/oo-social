@@ -2,6 +2,7 @@
     cursor: pointer;
     font-size: 11px;
     padding: 3px 8px 3px 23px;
+    margin-top: 5px;
 }
 
 .badgeProfile__header_open {
@@ -17,7 +18,12 @@
     color: #888;
 }
 
+.badgeProfile__header_roll h2{
+    color: dimgray;
+}
+
 .badgeProfile__header h2 {
+
     font-size: 11px;
     margin: 0px;
     padding: 0px;

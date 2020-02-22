@@ -46,7 +46,7 @@ export const uploadPhotosRequest = (photos) => async (dispatch, getState) => {
         const response = await mediaAPI.savePhoto(item)
         if (response.data.resultCode === 0) {
         } else {
-            //dispatch(stopSubmit("upload_image", {_error: response.data.messages[0] || "Image loading error"}))
+            dispatch(stopSubmit("upload_image", {_error: response.data.messages[0] || "Image loading error"}))
         }
     }
     dispatch(setUploadingImageOrder(null))

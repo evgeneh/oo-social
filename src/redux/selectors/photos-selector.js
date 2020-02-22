@@ -14,3 +14,8 @@ export const getSortedImages = createSelector(getPhotos, getPhotosCount, (photos
 
         return Arrays.sortBy(photos, "date",  true);
 })
+
+export const getSomeImages = createSelector(getPhotos, (photos) => {
+
+    return  Arrays.getSomeRandom(photos, 2)
+})

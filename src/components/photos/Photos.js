@@ -28,7 +28,7 @@ const Photos = (props) => {
         return props.photos[index - 1]
     }
 
-
+    console.log(props.isOwner)
     return (
         <ElementNameHeader text={`id${props.userId} photos, total: ${props.totalCount}`}>
 

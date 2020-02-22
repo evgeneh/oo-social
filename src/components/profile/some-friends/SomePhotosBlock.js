@@ -1,34 +1,58 @@
 import React from "react";
 
-import style from "./SomeFriendsBlock.module.css"
-import userDefPic from "../../../media/def_usrpic_small.jpg"
+import PropTypes from "prop-types";
 
 import BadgeHeaderHOC from "../Widjet/BadgeHeader";
 import BadgeSubHeader from "../Widjet/BadjeSubHeader";
 
 import {NavLink} from "react-router-dom";
 
+import styled from "styled-components"
+import {dateParse} from "../../../utils/date";
 
-const SomeFriends = ({users, count, pageId}) => {
+
+const SomePhotosBlock = styled.div`
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 90px 1fr;
+`;
+
+const DateText = styled.span`
+    color:grey
+`
+
+//show some photos on profile page
+const SomePhotos = ({photos, count, pageId}) => {
     return (
         <>
-            <BadgeSubHeader count={count} name={(count === 1) ? "friend" : "friends"} link={"/friends" + pageId} />
-        <div className={style.someUsers}>
+            <BadgeSubHeader count={count} name={(count === 1) ? "photo" : "photos"} link={"/photos" + pageId} />
+        <SomePhotosBlock >
             {
-                users.map(user => {
-                    return (<NavLink to={'/id' + user.id} className={style.profile__small}  key={user.id}>
-                            <div className={style.profileImage} key={user.id}>
+                photos.map(photo => {
+                    return (<>
+                        <NavLink to={'/photos' + pageId}  key={pageId}>
                                 <img
-                                    src={user.photos.small ? user.photos.small : userDefPic}
-                                    alt={"id" + user.id + " small userpic"}/>
-                            </div>
-                            {user.name}
-                        </NavLink>
+                                    width={"80px"}
+                                    src={photo.preview}
+                                    alt={`id ${photo.userId} photo`}/>
+
+                         </NavLink>
+                         <div>
+                             <b>{photo.description}</b>
+                             <DateText>{ dateParse.toStrings(photo.date) }</DateText>
+                         </div>
+                     </>
                     )
                 })}
-        </div>
+        </SomePhotosBlock>
             </>
     )
 }
 
-export default BadgeHeaderHOC(SomeFriends);
+SomePhotos.propTypes = {
+    photos: PropTypes.array,
+    count: PropTypes.number,
+    pageId: PropTypes.number,
+}
+
+export default BadgeHeaderHOC(SomePhotos);

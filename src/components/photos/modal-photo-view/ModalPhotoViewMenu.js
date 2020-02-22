@@ -1,12 +1,16 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 
 import style from './ModalPhoto.module.css';
+
+import {dateParse} from '../../../utils/date'
 
 import Link from "../../instruments/link/Link";
 
 const ModalPhotoViewMenu = ({isOwner, image, setAsProfile, isDisabled, deletePhoto}) => {
 
-    const date = (new Date(image.date)).toLocaleDateString("en-Us")
+
+
+    const date = dateParse.toNumbers(image.date)
 
     const setImageHandle = () => {
         setAsProfile(image.id)

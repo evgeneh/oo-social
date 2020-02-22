@@ -5,6 +5,8 @@ import Link from "../../instruments/link/Link";
 import s from  '../user-status/UserStatus.module.css'
 import styled from 'styled-components'
 
+import {dateParse} from "../../../utils/date";
+
 const WallPost = styled.div`
     display: grid;
     grid-template-columns: 50px 1fr;
@@ -33,8 +35,8 @@ const PostFooter = styled.div`
 `;
 
 const SinglePost = ({post}) => {
-    const options = { year: 'numeric', month: 'long', day: 'numeric' ,  hour12: false, hour: 'numeric', minute: 'numeric'};
-    const date = (new Date(post.date)).toLocaleString("en-Us", options)
+
+    const date = dateParse.toStrings(post.date)
     return (
         <WallPost>
             <div>

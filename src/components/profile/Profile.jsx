@@ -15,7 +15,9 @@ import {getFilledContactsCount} from "./ProfileAnalysis";
 
 import FileUpload from "../forms/FileUpload";
 import SomeFriendsBlock from "./some-friends/SomeFriendsBlock";
+import SomePhotosBlock from "./some-friends/SomePhotosBlock";
 import RateProfile from "./rating-counter/RateProfile";
+
 
 const LeftBlock = ({user, isOwner, uploadPhoto, setEditMode, rating, friends, beginFollowing, ...props}) => {
 
@@ -63,11 +65,12 @@ const LeftBlock = ({user, isOwner, uploadPhoto, setEditMode, rating, friends, be
                 }
             </ul>
             <RateProfile rateValue={rating}/>
-            <SomeFriendsBlock text={"friends"} count={friends.totalCount} users={friends.profiles} pageId={user.userId} />
+            <SomeFriendsBlock text={"Friends"} count={friends.totalCount} users={friends.profiles} pageId={user.userId} />
+            <SomePhotosBlock  text={"Photos"} count={props.photosTotalCount} photos={props.photos} pageId={user.userId} />
 
         </div>)
 }
-
+//
 //<div className={s.profilePage}>
 const Profile = ({user, setStatusRequest, statusText, isOwner, uploadProfile, isEdit, profileUpdateFetching, ...props}) => {
 

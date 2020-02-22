@@ -7,6 +7,8 @@ import {getSomeFriends} from "../../redux/selectors/users-selector";
 import {getProfileFollowingFetch, getProfileFull, getUserRating} from "../../redux/selectors/profile-selector";
 import {getSomeWallPosts} from "../../redux/selectors/wall-selector";
 
+import {getSomeImages} from "../../redux/selectors/photos-selector";
+
 import {
     getProfileRequest,
     getStatusRequest,
@@ -18,6 +20,8 @@ import {
 
 import {getFriendsById} from "../../redux/reducers/users-reducer";
 import {AddNewPostRequest, getWallRequest} from "../../redux/reducers/wall-reducer";
+
+import {getPhotosRequest} from "../../redux/reducers/images-reducer";
 
 import Profile from "./Profile";
 
@@ -39,6 +43,8 @@ class ProfileAPI extends React.Component {
         this.props.getFriendsById(1, uid);
 
         this.props.getWallRequest(uid)
+
+        this.props.getPhotosRequest(uid);
     }
 
     setEditMode = (mode) => {
@@ -92,8 +98,13 @@ let mapStateToProps = (state) => {
         friends: getSomeFriends(state),
         rating: getUserRating(state),
 
+        //wall state
         posts: getSomeWallPosts(state),
-        postsCount: state.wall.totalCount
+        postsCount: state.wall.totalCount,
+
+        //photos state
+        photos: getSomeImages(state),
+        photosTotalCount: state.photos.totalCount
     }
 }
 
@@ -109,5 +120,7 @@ export default compose(withRouter, withLoginRedirect, connect(mapStateToProps, {
     singleProfileUnfollow,
 
     AddNewPostRequest,
-    getWallRequest
+    getWallRequest,
+
+    getPhotosRequest
 }))(ProfileAPI)
