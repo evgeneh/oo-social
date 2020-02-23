@@ -9,10 +9,13 @@ const instance = axios.create({
 });
 */
 
+
+const BASE_URL = (process.env.NODE_ENV  === 'development') ?
+    process.env.REACT_APP_BASE_URL_DEV : 'https://oo-server.herokuapp.com/api/'
 //настройка подключения к локальному серверу
 
 const instance = axios.create({
-    baseURL: 'http://localhost:4000/api/',  //'https://oo-server.herokuapp.com/api/',
+    baseURL: BASE_URL,
     withCredentials: true
 });
 

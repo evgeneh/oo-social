@@ -16,7 +16,7 @@ const SideBarItemWithAlert = (props) => {
 const SideBar = (props) => {
     let ownerId = props.myId ? "/id" + props.myId : "";
     return (
-        <ol className={s.sideBar__nav}>
+        <ol className={s.sideBar__nav }>
             <li className={s.sideBar__profileLi}>
                 <NavLink to={ownerId} className={s.sideBar__nav__profile}> My Profile </NavLink>
                 <NavLink to='/edit' className={s.sideBar__nav__profile_edit}> ed. </NavLink>

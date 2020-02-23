@@ -32,7 +32,7 @@ const App = ({isInitialized, initApp, isAuth, myId}) => {
                 <Header/>
             </header>
             <div className='sideBar'>
-                <AlertsContainer/>
+                <AlertsContainer />
             </div>
             <div className='pageBody'>
 

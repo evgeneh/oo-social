@@ -21,9 +21,23 @@
     font-size: 14px;
     left: 0;
     top: 0;
-    width: 129px;
-    width: 232px;
+    width: 120px;
 }
+
+.menuHidden {
+    position: absolute;
+    padding: 12px;
+    left: 0;
+    top: 0;
+    display: none;
+}
+
+@media  (max-width: 767px ) {
+    .home {display: none;}
+    .menuHidden { display: block;}
+}
+
+
 
 .home__logo {
     color: white;

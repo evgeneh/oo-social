@@ -29,7 +29,7 @@ const Login = (props) => {
                     <>
                         {props.children}
                         <LoginForm onSubmit={formSubmit}/>
-                        <LoginWelcomeText>If you haven't an account, please <Link to="/registration" linkName='register' /></LoginWelcomeText>
+                        <LoginWelcomeText>If you haven't an account, please <Link to='/registration' linkName='register' /></LoginWelcomeText>
                     </>
                 }
             </div>

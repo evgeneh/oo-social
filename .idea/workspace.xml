@@ -2,20 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd2ca76c-d9c0-4f9e-ab6e-aaf385296955" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/footer/Footer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/profile/ProfileLeftBlock.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/profile/wall/WallContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/header/HeaderMobileMenu.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/media/menu.JPG" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/MainMenu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/MainMenu.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/instruments/link/Link.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/instruments/link/Link.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/photos/modal-photo-view/ModalPhotoViewMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/photos/modal-photo-view/ModalPhotoViewMenu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/Profile.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/profile/ProfileContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/ProfileContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/profile/wall/Wall.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/wall/Wall.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers/requests-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/requests-reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers/users-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/users-reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/forms/LoginForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/forms/LoginForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/Header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/login-register/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login-register/Login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/Profile.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/Profile.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/element-name-header/ElementNameHeader.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/element-name-header/ElementNameHeader.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sidebar/SideBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sidebar/SideBar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sidebar/SideBar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sidebar/SideBar.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/oosocial-api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/oosocial-api/api.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,7 +38,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/profile" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/header" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -48,19 +49,19 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\270120\oo-social\src\components\profile" />
-      <recent name="E:\270120\oo-social\src\components\profile\wall" />
-      <recent name="E:\270120\oo-social\src\components\Footer" />
-      <recent name="E:\270120\oo-social\src\components\profile\some-friends" />
-      <recent name="E:\270120\oo-social\src\redux\selectors" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\270120\oo-social\src\media" />
       <recent name="E:\270120\oo-social\src\components\forms" />
       <recent name="F:\old-ontach\src\components\photos\modal-photo-view" />
       <recent name="F:\old-ontach\src\components\profile\some-friends" />
       <recent name="F:\old-ontach\src\components\instruments" />
-      <recent name="F:\old-ontach\src" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\270120\oo-social\src\components\header" />
+      <recent name="E:\270120\oo-social\src\components\profile" />
+      <recent name="E:\270120\oo-social\src\components\profile\wall" />
+      <recent name="E:\270120\oo-social\src\components\Footer" />
+      <recent name="E:\270120\oo-social\src\components\profile\some-friends" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -101,8 +102,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Jest.+++ reducer for ADD_INPUT" />
         <item itemvalue="npm.deploy" />
+        <item itemvalue="Jest.+++ reducer for ADD_INPUT" />
       </list>
     </recent_temporary>
   </component>
@@ -182,7 +183,8 @@
       <workItem from="1582050294817" duration="11911000" />
       <workItem from="1582140676380" duration="10143000" />
       <workItem from="1582199017050" duration="21183000" />
-      <workItem from="1582279437464" duration="40337000" />
+      <workItem from="1582279437464" duration="40490000" />
+      <workItem from="1582452623227" duration="19559000" />
     </task>
     <servers />
   </component>

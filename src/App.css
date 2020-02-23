@@ -5,7 +5,7 @@
   justify-content: center;
   grid-template-columns: 118px 660px ;
   grid-template-rows: 45px 1fr;
-  grid-column-gap: 15px;
+  grid-column-gap: 10px;
   grid-template-areas:
           "h h"
           "nav body"
@@ -37,15 +37,16 @@ h2{
   .sideBar {display: none;}
 
   .main {
-    grid-template-columns: 650px ;
+    grid-template-columns: 1fr;
     grid-template-areas: "h"
     "nav"
     "body"
+    "f"
   }
 }
 
 @media only screen and (max-width: 375px ) {
   .main{
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 1fr
   }
 }

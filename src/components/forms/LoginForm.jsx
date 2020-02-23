@@ -8,6 +8,7 @@ import {minLength, required} from "./forms-validators";
 import TextBox from "./inputs-validate/TextBox";
 import Button from "../instruments/buttons/Button";
 import CheckBox from "./inputs-validate/CheckBox";
+import {NavLink} from "react-router-dom";
 
 
 const minLength4 = minLength(4);
@@ -26,7 +27,7 @@ const LoginForm = (props) => {
             <div>
                 <Field name="rememberMe" component={CheckBox} label='Remember me' reverse={true}/>
                 <div className={s.loginButton + " " + s.loginButton_left}>
-                <a href={"/registration"}><Button type="button" disabled={props.submit}>Register</Button></a>
+                <NavLink to={"/registration"}><Button type="button" disabled={props.submit}>Register</Button></NavLink>
                 </div>
                 <div className={s.loginButton}>
                     <Button type="submit" disabled={props.submit}>Login</Button>
