@@ -46,7 +46,7 @@ const SomePhotos = ({photos, count, pageId}) => {
             {
                 photos.map(photo => {
                     return (
-                        <>
+                        <React.Fragment key={photo.id}>
                         <NavLink key={photo.id} to={'/photos' + pageId}  key={pageId}>
                                 <img
                                     width={"80px"}
@@ -58,7 +58,7 @@ const SomePhotos = ({photos, count, pageId}) => {
                              <PictureTitle><Description photo={photo}/></PictureTitle> <br/>
                              <DateText>Uploaded { dateParse.toStrings(photo.date) }</DateText>
                          </div>
-                     </>
+                     </React.Fragment>
                     )
                 })}
         </SomePhotosBlock>

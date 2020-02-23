@@ -44,9 +44,9 @@ const ModalPhotoViewMenu = ({isOwner, image, setAsProfile, isDisabled, deletePho
 
                 {isOwner ?
                     <ul className={style.imageModal_menu__left}>
-                        <li><Link isDisabled={isDisabled} onClick={()=> {setDescriptionEdit(true)} } linkName={"Change image description"}/></li>
-                        <li><Link isDisabled={isDisabled} onClick={setImageHandle} linkName={"Set as profile image"}/></li>
-                        <li><Link isDisabled={isDisabled} onClick={deleteImageHandle} linkName={"Delete this image"}/></li>
+                        <li key={"ci"}><Link isDisabled={isDisabled} onClick={()=> {setDescriptionEdit(true)} } linkName={"Change image description"}/></li>
+                        <li  key={"si"}><Link isDisabled={isDisabled} onClick={setImageHandle} linkName={"Set as profile image"}/></li>
+                        <li  key={"di"}><Link isDisabled={isDisabled} onClick={deleteImageHandle} linkName={"Delete this image"}/></li>
                     </ul> :
                     <div></div>}
 

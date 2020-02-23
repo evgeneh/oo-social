@@ -32,12 +32,15 @@ const MenuHidden = () => {
     const handleHideMenuClick = () => {
         setMenuShow(false)
     }
+
+    const handleToggleMenuClick = () => {
+        setMenuShow(!isMenuShow)
+    }
+
     return (
         <>
             <div className={style.menuHidden}>
-                <img src={menuImage} width={"21px"} onTouchStart={() => {
-                    setMenuShow(!isMenuShow)
-                }}/>
+                <img src={menuImage} width={"21px"} onMouseUp={handleToggleMenuClick} />
             </div>
             {isMenuShow &&
             <MenuHiddenBody onClick={handleHideMenuClick} >

@@ -2,21 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd2ca76c-d9c0-4f9e-ab6e-aaf385296955" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/header/HeaderMobileMenu.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/media/menu.JPG" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/forms/LoginForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/forms/LoginForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/Header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/login-register/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login-register/Login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/HeaderMobileMenu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/HeaderMobileMenu.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/photos/Photos.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/photos/Photos.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/photos/modal-photo-view/ModalPhotoViewMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/photos/modal-photo-view/ModalPhotoViewMenu.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/profile/Profile.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/Profile.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/profile/element-name-header/ElementNameHeader.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/element-name-header/ElementNameHeader.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sidebar/SideBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sidebar/SideBar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sidebar/SideBar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sidebar/SideBar.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/oosocial-api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/oosocial-api/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/some-of-profile/SomePhotosBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/some-of-profile/SomePhotosBlock.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -100,8 +91,19 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.start" />
         <item itemvalue="npm.deploy" />
         <item itemvalue="Jest.+++ reducer for ADD_INPUT" />
       </list>
@@ -184,7 +186,7 @@
       <workItem from="1582140676380" duration="10143000" />
       <workItem from="1582199017050" duration="21183000" />
       <workItem from="1582279437464" duration="40490000" />
-      <workItem from="1582452623227" duration="19559000" />
+      <workItem from="1582452623227" duration="21472000" />
     </task>
     <servers />
   </component>

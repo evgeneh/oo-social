@@ -39,7 +39,7 @@ const Photos = (props) => {
                     props.photos.map((photo, index) => {
                         return <div className={style.image__preview} key={photo.id} onClick={showSinglePhoto.bind(null, index + 1)}>
 
-                            <img src={photo.preview} alt={`id ${props.userId} photo ${(index + 1)}`}/>
+                            <img key={photo.id} src={photo.preview} alt={`id ${props.userId} photo ${(index + 1)}`}/>
                         </div>
                     })
                 }
