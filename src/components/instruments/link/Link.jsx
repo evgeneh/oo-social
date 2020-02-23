@@ -5,7 +5,7 @@ import s from './Link.module.css'
 
 //
 const Link = ({to, linkName, isExternal, onClick, isDisabled}) => {
-    //для ссылок на сторонние Url
+    //для ссылок на сторонние Url флаг isExternal
     if (isDisabled)
         return <span className={s.navLink + " " + s.navLink__disabled} >{linkName}</span>
     if (!to)

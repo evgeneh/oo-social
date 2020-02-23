@@ -52,7 +52,7 @@ const ModalPhotoViewMenu = ({isOwner, image, setAsProfile, isDisabled, deletePho
 
                 <div className={style.imageModal_menu__left + " " + style.imageModal_menu__right}>
 
-                        <li>
+                        <li key={"Description edit"}>
                             {isDescriptionEdit ?
                                 <input autoFocus placeholder="Add description" value={imgDescription}
                                        onChange={handleEditImageDescription}
@@ -62,8 +62,8 @@ const ModalPhotoViewMenu = ({isOwner, image, setAsProfile, isDisabled, deletePho
                         </li>
 
 
-                    <li>Uploaded {date}</li>
-                    <li><Link isExternal={true} to={image.path} linkName="Watch full image version" /></li>
+                    <li key={"Photo date"}>Uploaded {date}</li>
+                    <li key={"full version"}><Link isExternal={true} to={image.path} linkName="Watch full image version" /></li>
 
                 </div>
             </div>

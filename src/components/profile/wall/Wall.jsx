@@ -23,7 +23,7 @@ const Wall = ({posts, count, pageId, addPost}) => {
 
     return (
         <>
-            <BadgeSubHeader count={count} name={(count === 1) ? "post" : "posts"} link={"/wall?id=" + pageId} >
+            <BadgeSubHeader count={count} name={(count === 1) ? "post" : "posts"} link={"/wall" + pageId} >
                 <Link onClick={handleShowTextBox} linkName={"Write New Post"} />
             </BadgeSubHeader>
             {isOpenTextBox &&

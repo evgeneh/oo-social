@@ -4,7 +4,7 @@ import {NavLink} from "react-router-dom";
 
 
 const MainMenu = (props) => {
-    let menuItems = [{name: 'add', path: '/add'}, {name: 'items', path: '/items'},
+    let menuItems = [
                      {name: 'events', path: '/events'}, {name: 'communities', path: '/communities'}, {name: 'users', path: '/users'} ];
     let handleLogout = () => {
         props.logout()

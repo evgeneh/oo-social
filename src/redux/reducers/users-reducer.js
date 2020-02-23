@@ -108,7 +108,7 @@ const setFriends = (friends, totalCount) => {return {type: SET_FRIENDS, friends,
 
 export const getFriendsByPage = (page, id) => async (dispatch) => {
     dispatch(setFetching(true))
-    const val = await getFriendsRequest(page, id, setUsers, dispatch);
+    await getFriendsRequest(page, id, setUsers, dispatch);
     dispatch(setFetching(false))
 }
 
