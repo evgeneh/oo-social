@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5eec0259fb83f192b25607f70ee8fe44",
+    "revision": "3ea7a99a1dda48fbab3852a11764b826",
     "url": "/oo-social/index.html"
   },
   {
-    "revision": "e854dcc04056af39cecc",
-    "url": "/oo-social/static/css/3.c404a9a8.chunk.css"
+    "revision": "cb9cbadf469d401bcf27",
+    "url": "/oo-social/static/css/3.333a39ab.chunk.css"
   },
   {
     "revision": "7d5acc2957e292fe55ac",
@@ -16,15 +16,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/oo-social/static/css/5.cb142422.chunk.css"
   },
   {
-    "revision": "6d64710eaad99c7af20b",
-    "url": "/oo-social/static/css/main.db06f1cf.chunk.css"
+    "revision": "9673a51340795085b7bb",
+    "url": "/oo-social/static/css/main.2179fcf2.chunk.css"
   },
   {
     "revision": "01d209e1cb4c3bf6bfe2",
     "url": "/oo-social/static/js/2.2d338611.chunk.js"
   },
   {
-    "revision": "e854dcc04056af39cecc",
+    "revision": "cb9cbadf469d401bcf27",
     "url": "/oo-social/static/js/3.14a491cf.chunk.js"
   },
   {
@@ -40,12 +40,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/oo-social/static/js/6.6ac666aa.chunk.js"
   },
   {
-    "revision": "6d64710eaad99c7af20b",
+    "revision": "9673a51340795085b7bb",
     "url": "/oo-social/static/js/main.3517d07e.chunk.js"
   },
   {
-    "revision": "2b767e8ed4f1050d8105",
-    "url": "/oo-social/static/js/runtime~main.3c445160.js"
+    "revision": "3d265cfcb7ebf3eea17f",
+    "url": "/oo-social/static/js/runtime~main.29f7a670.js"
   },
   {
     "revision": "465eaf9efe1956990ba982c2a44e2753",
