@@ -9,6 +9,9 @@ import BadgeSubHeader from "../Widjet/BadjeSubHeader";
 
 import SinglePost from "./SinglePost";
 import PostAddForm from "../../forms/PostAddForm";
+import {reduxForm} from "redux-form";
+
+const PostAddFormWall = reduxForm({form: "wallMessage"})(PostAddForm)
 
 const Wall = ({posts, count, pageId, addPost}) => {
 
@@ -27,7 +30,7 @@ const Wall = ({posts, count, pageId, addPost}) => {
                 <Link onClick={handleShowTextBox} linkName={"Write New Post"} />
             </BadgeSubHeader>
             {isOpenTextBox &&
-                    <PostAddForm onSubmit={handleAddPost}/>
+                    <PostAddFormWall onSubmit={handleAddPost}/>
             }
             {
                 posts.map( (post) => {

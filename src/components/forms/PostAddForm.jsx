@@ -34,4 +34,4 @@ const PostAddForm = (props) => {
     )
 }
 
-export default reduxForm({form: "wallMessage"})(PostAddForm)
+export default PostAddForm

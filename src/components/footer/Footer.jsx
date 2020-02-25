@@ -9,6 +9,9 @@ const PageFooter = styled.div`
     grid-area: f;
     text-align: center;
     padding: 20px 10px;
+    height: auto;
+    display: table-cell;
+    vertical-align: bottom;
 `;
 
 

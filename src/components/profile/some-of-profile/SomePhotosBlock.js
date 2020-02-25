@@ -9,6 +9,7 @@ import {NavLink} from "react-router-dom";
 
 import styled from "styled-components"
 import {dateParse} from "../../../utils/date";
+import {DateText} from "../../instruments/styles/Styles";
 
 
 const SomePhotosBlock = styled.div`
@@ -16,10 +17,6 @@ const SomePhotosBlock = styled.div`
     grid-gap: 5px;
     grid-template-columns: 90px auto;
 `;
-
-const DateText = styled.span`
-    color:grey
-`
 
 const PictureTitle = styled.div`
     word-break: break-word;

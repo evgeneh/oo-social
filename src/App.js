@@ -16,6 +16,7 @@ import LoginRedirectTo from "./components/login-register/LoginRedirectTo";
 import PhotosContainer from "./components/photos/PhotosContainer";
 import Footer from "./components/footer/Footer";
 import WallContainer from "./components/profile/wall/WallContainer";
+import DialogContainer from "./components/profile/dialog/DialogContainer";
 
 const ProfileContainer = React.lazy(() => import( "./components/profile/ProfileContainer"));
 const Register = React.lazy(() => import( "./components/login-register/Register"));
@@ -67,6 +68,8 @@ const App = ({isInitialized, initApp, isAuth, myId}) => {
                 <Route path='/notes' component={Notes}/>
 
                 <Route path='/wall:userId?' component={WallContainer}/>
+
+                <Route path='/dialog:userId?' component={DialogContainer}/>
 
                 <Route path='/login' component={Login}/>
                 <Route path='/registration' render={ ()=> (
