@@ -1,14 +1,14 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4546f0ab41ffca6402f386c80ddf1acb",
+    "revision": "5283733cc3d15ad6a90aa0024a7442b8",
     "url": "/oo-social/index.html"
   },
   {
-    "revision": "e5d5d58ddd3448bfa0f9",
+    "revision": "d55a78f8f108f421d673",
     "url": "/oo-social/static/css/3.a9bf34ec.chunk.css"
   },
   {
-    "revision": "afcf0e7d2eec997d90e1",
+    "revision": "bb1cd2106cf64f5927ce",
     "url": "/oo-social/static/css/4.cb142422.chunk.css"
   },
   {
@@ -16,36 +16,36 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/oo-social/static/css/5.cb142422.chunk.css"
   },
   {
-    "revision": "313fd19d912dac09e668",
+    "revision": "854f15acc2be842c71bb",
     "url": "/oo-social/static/css/main.e5d6bf0d.chunk.css"
   },
   {
-    "revision": "8cc502be86c6858998d2",
-    "url": "/oo-social/static/js/2.1c6c7de8.chunk.js"
+    "revision": "5148a7ca3572bb7b8314",
+    "url": "/oo-social/static/js/2.42d63b28.chunk.js"
   },
   {
-    "revision": "e5d5d58ddd3448bfa0f9",
-    "url": "/oo-social/static/js/3.1f414b8a.chunk.js"
+    "revision": "d55a78f8f108f421d673",
+    "url": "/oo-social/static/js/3.f1300cfa.chunk.js"
   },
   {
-    "revision": "afcf0e7d2eec997d90e1",
-    "url": "/oo-social/static/js/4.4d8ca288.chunk.js"
+    "revision": "bb1cd2106cf64f5927ce",
+    "url": "/oo-social/static/js/4.c005e61e.chunk.js"
   },
   {
     "revision": "ba2f4e36c9dbc1fd3382",
     "url": "/oo-social/static/js/5.a3d84553.chunk.js"
   },
   {
-    "revision": "42114d97eca4a140ef48",
-    "url": "/oo-social/static/js/6.9edba676.chunk.js"
+    "revision": "9d896fe93f9e0767bbaa",
+    "url": "/oo-social/static/js/6.375c1085.chunk.js"
   },
   {
-    "revision": "313fd19d912dac09e668",
-    "url": "/oo-social/static/js/main.557f25a4.chunk.js"
+    "revision": "854f15acc2be842c71bb",
+    "url": "/oo-social/static/js/main.bb9b246b.chunk.js"
   },
   {
-    "revision": "adc45c0b496642ca17d9",
-    "url": "/oo-social/static/js/runtime~main.897721c2.js"
+    "revision": "38234861065b83cb81c9",
+    "url": "/oo-social/static/js/runtime~main.b83d9024.js"
   },
   {
     "revision": "465eaf9efe1956990ba982c2a44e2753",
