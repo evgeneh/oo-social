@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/oo-social/static/css/main.e5d6bf0d.chunk.css",
-    "main.js": "/oo-social/static/js/main.bb9b246b.chunk.js",
-    "main.js.map": "/oo-social/static/js/main.bb9b246b.chunk.js.map",
+    "main.js": "/oo-social/static/js/main.a26af859.chunk.js",
+    "main.js.map": "/oo-social/static/js/main.a26af859.chunk.js.map",
     "runtime~main.js": "/oo-social/static/js/runtime~main.b83d9024.js",
     "runtime~main.js.map": "/oo-social/static/js/runtime~main.b83d9024.js.map",
     "static/js/2.42d63b28.chunk.js": "/oo-social/static/js/2.42d63b28.chunk.js",
@@ -19,7 +19,7 @@
     "static/js/6.375c1085.chunk.js": "/oo-social/static/js/6.375c1085.chunk.js",
     "static/js/6.375c1085.chunk.js.map": "/oo-social/static/js/6.375c1085.chunk.js.map",
     "index.html": "/oo-social/index.html",
-    "precache-manifest.2a93259ff1793f6b4a279e39d1a35963.js": "/oo-social/precache-manifest.2a93259ff1793f6b4a279e39d1a35963.js",
+    "precache-manifest.56109af35756757c10eda6e0b68f6ca0.js": "/oo-social/precache-manifest.56109af35756757c10eda6e0b68f6ca0.js",
     "service-worker.js": "/oo-social/service-worker.js",
     "static/css/3.a9bf34ec.chunk.css.map": "/oo-social/static/css/3.a9bf34ec.chunk.css.map",
     "static/css/4.cb142422.chunk.css.map": "/oo-social/static/css/4.cb142422.chunk.css.map",
