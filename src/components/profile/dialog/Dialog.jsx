@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 
 import {dateCompare, dateParse} from "../../../utils/date";
-import {DateText} from "../../instruments/styles/Styles";
+import {DateText, escapedNewLineToLineBreakTag} from "../../instruments/styles/Styles";
 import PostAddForm from "../../forms/PostAddForm";
 import {reduxForm} from "redux-form";
 
@@ -33,31 +33,36 @@ const DialogsList = styled.ol`
 `
 
 const DialogMessage = styled.li`
+    display: flex;
     padding: 5px 0;
     width 100%;
-    text-align: ${ p => p.myPost ? 'right' : 'left'};
-    white-space: pre;
-    display: flex;
-    align-items: center;
-    justify-content: ${ p => p.myPost ? 'right' : 'left'};;
-    div {
-        padding: 3px 7px;
-        border-radius: 3px;
-        width: auto;
-        max-width: 80%;
-        background: white;
-    }
+    text-align: ${ p => p.myPost ? 'right' : 'left'};    
+    
+    justify-content: ${ p => p.myPost ? 'right' : 'left'};
+
+    
+    
     small {
         color: grey;
     }
+    
 `;
+
 
 const DialogData = styled.li`
     padding-top: 5px;
-    display: flex;
     align-items: center;
     justify-content: center;
 `;
+
+const MessageCut = styled.div`
+        word-break: break-word;
+        padding: 3px 7px;
+        border-radius: 3px;
+        background: white;  
+        max-width:80%;                 
+    
+`
 
 const PostAddFormDialog = reduxForm({form: "dialogMessage"})(PostAddForm)
 
@@ -98,9 +103,11 @@ const Dialog = ({messages, owner, totalMessagesCount, myId, sendMessage}) => {
                                      <DateText> {dateParse.toDayAndMonth(date)} </DateText>
                                 </DialogData>
                             }
-                                <DialogMessage key={message.date} myPost={message.myPost}><div>
-                                    {message.text} <br/>
-                                    <small>{dateParse.toTimeString(message.date)}</small></div>
+                                <DialogMessage key={message.date} myPost={message.myPost}>
+                                    <MessageCut>
+                                       {escapedNewLineToLineBreakTag(message.text)}
+                                         <small>{dateParse.toTimeString(message.date)}</small>
+                                    </MessageCut>
                                 </DialogMessage>
                              </React.Fragment>
                         })

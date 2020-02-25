@@ -16,9 +16,11 @@ const SomePhotosBlock = styled.div`
     display: grid;
     grid-gap: 5px;
     grid-template-columns: 90px auto;
+    text-align: left;
 `;
 
 const PictureTitle = styled.div`
+    
     word-break: break-word;
     font-weight: bold;
 `

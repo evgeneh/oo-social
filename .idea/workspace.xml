@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd2ca76c-d9c0-4f9e-ab6e-aaf385296955" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/instruments/styles/Styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/profile/dialog/Dialog.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/profile/dialog/DialogContainer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/reducers/dialogs-reducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/footer/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/Footer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/forms/PostAddForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/forms/PostAddForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/instruments/styles/Styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/instruments/styles/Styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/ProfileLeftBlock.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/ProfileLeftBlock.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/dialog/Dialog.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/dialog/Dialog.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/profile/some-of-profile/SomePhotosBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/some-of-profile/SomePhotosBlock.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/profile/wall/Wall.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/wall/Wall.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/date.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/date.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -109,8 +102,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.start" />
         <item itemvalue="npm.deploy" />
+        <item itemvalue="npm.start" />
         <item itemvalue="Jest.+++ reducer for ADD_INPUT" />
       </list>
     </recent_temporary>
@@ -194,7 +187,7 @@
       <workItem from="1582279437464" duration="40490000" />
       <workItem from="1582452623227" duration="21729000" />
       <workItem from="1582572995310" duration="733000" />
-      <workItem from="1582646166481" duration="486000" />
+      <workItem from="1582646166481" duration="7489000" />
     </task>
     <servers />
   </component>

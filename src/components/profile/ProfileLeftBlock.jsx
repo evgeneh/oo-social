@@ -32,7 +32,7 @@ const ProfileLeftBlock = ({user, isOwner, uploadPhoto, setEditMode, rating, frie
 
     return (
         <div className={s.leftBlock}>
-            <img src={imageSrc} alt={user.fullName + ' prfile photo'} width='210px'/>
+            <img src={imageSrc} alt={user.fullName + ' profile photo'} width='210px'/>
             <ul className={s.leftBlock__profileMenu}>
                 {isOwner ?
                 <>
