@@ -4,10 +4,14 @@ import {connect} from "react-redux";
 import {compose} from "redux";
 import {withRouter} from "react-router-dom";
 
+import {ListContainerSection} from "../../instruments/styles/Styles";
+
 import Wall from "./Wall";
-import {getSomeWallPosts, getWallPosts} from "../../../redux/selectors/wall-selector";
+import {getWallPosts} from "../../../redux/selectors/wall-selector";
 import {AddNewPostRequest, getWallRequest} from "../../../redux/reducers/wall-reducer";
 import ElementNameHeader from "../element-name-header/ElementNameHeader";
+
+
 
 /*return <Wall text={"Wall"} isAuth={true} pageId={userId}
              posts={this.props.posts} count={this.props.postsCount}
@@ -16,20 +20,22 @@ import ElementNameHeader from "../element-name-header/ElementNameHeader";
 
 const WallContainer = ({match, myId, ...props}) => {
 
-
     const userId = match.params.userId ? match.params.userId : myId;
 
-    const handleWall= () => {
-        getWallRequest(userId)
+    const handleWall = () => {
+        props.getWallRequest(userId)
     }
 
-    useEffect(() => { handleWall()}, [match.params.userId, parseInt(userId)])
+    useEffect(() => {
+        handleWall()
+    }, [match.params.userId, parseInt(userId)] )
 
-    return (<ElementNameHeader text={'id' + userId + ' wall'} >
-
-         <Wall text={"Wall"} isAuth={props.isAuth} pageId={userId}
-                     posts={props.posts} count={props.postsCount}
-                     addPost={props.AddNewPostRequest} />
+    return (<ElementNameHeader text={'id' + userId + ' wall'}>
+        <ListContainerSection>
+            <Wall text={"Wall"} isAuth={props.isAuth} pageId={userId}
+                  posts={props.posts} count={props.postsCount}
+                  addPost={props.AddNewPostRequest} isOpen={true}/>
+        </ListContainerSection>
     </ElementNameHeader>)
 }
 

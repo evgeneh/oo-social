@@ -124,22 +124,26 @@ export const mediaAPI = {
 
 export const wallAPI = {
     getWall(id) {
-        return instance.get('/wall?id=' + id)
+        return instance.get('wall?id=' + id)
     },
 
     addPost(userId, text) {
-       return instance.post('/wall', {userId, text})
+       return instance.post('wall', {userId, text})
     }
 }
 
 export const dialogAPI = {
 
     getDialog(id) {
-        return instance.put('/dialog?id=' + id)
+        return instance.put('dialog?id=' + id)
     },
 
     sendMessage(payload) {
-        return instance.post('/dialog/message', payload)
+        return instance.post('dialog/message', payload)
+    },
+
+    getDialogList() {
+        return instance.get('dialogs')
     }
 
 }

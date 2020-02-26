@@ -13,7 +13,10 @@ const initialState={
     ],
     totalMessagesCount: 14,
     isFetching: false,
-    isMessaging: false
+    isMessaging: false,
+
+    dialogsTotalCount: 0,
+    dialogs: []
 }
 
 const SET_DIALOGS = 'social-network/dialogs/SET_DIALOGS'
@@ -24,6 +27,7 @@ const TOGGLE_FETCHING_UPDATE = 'social-network/dialogs/TOGGLE_FETCHING_UPDATE'
 
 const TOGGLE_FETCHING_MESSAGING = 'social-network/dialogs/TOGGLE_FETCHING_UPDATE'
 
+const SET_DIALOGS_LIST = 'social-network/dialogs/SET_DIALOGS_LIST'
 
 
 export const dialogsReducer = (state = initialState, action) => {
@@ -38,6 +42,8 @@ export const dialogsReducer = (state = initialState, action) => {
             return {...state, isFetching: action.isFetching}
         case TOGGLE_FETCHING_MESSAGING:
             return {...state, isMessaging: action.isFetching}
+        case SET_DIALOGS_LIST:
+            return {...state, dialogs: [...action.dialogs], dialogsTotalCount: action.dialogsTotalCount}
         default:
             return state
     }
@@ -68,10 +74,9 @@ export const AddNewMessageRequest = (messageText, id) => async (dispatch, getSta
 }
 
 
-
 export const GetMessagesRequest = (id) => async (dispatch) => {
- dispatch(toggleFetching(true))
- let response = await dialogAPI.getDialog(id)
+    dispatch(toggleFetching(true))
+    let response = await dialogAPI.getDialog(id)
 
     if (response.data.resultCode === 0)
     {
@@ -81,4 +86,17 @@ export const GetMessagesRequest = (id) => async (dispatch) => {
     dispatch(toggleFetching(false))
 }
 
+const setDialogList = (dialogsTotalCount, dialogs) => {
+    return {type: SET_DIALOGS_LIST, dialogsTotalCount, dialogs}
+}
+
+export const GetDialogsRequest = () => async (dispatch) => {
+    dispatch(toggleFetching(true))
+
+    let response = await dialogAPI.getDialogList()
+    if (response.data.resultCode === 0) {
+        dispatch(setDialogList(response.data.data.dialogsTotalCount, response.data.data.dialogs))
+    }
+    dispatch(toggleFetching(false))
+}
 

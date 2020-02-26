@@ -13,9 +13,9 @@ import {reduxForm} from "redux-form";
 
 const PostAddFormWall = reduxForm({form: "wallMessage"})(PostAddForm)
 
-const Wall = ({posts, count, pageId, addPost}) => {
+const Wall = ({posts, count, pageId, addPost, isOpen = false}) => {
 
-    let [isOpenTextBox, setTextBoxStatus] = useState(false)
+    let [isOpenTextBox, setTextBoxStatus] = useState(isOpen)
 
     const handleShowTextBox = () =>  setTextBoxStatus(true)
 

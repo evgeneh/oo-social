@@ -7,6 +7,7 @@ import {withRouter} from "react-router-dom";
 import ElementNameHeader from "../element-name-header/ElementNameHeader";
 import Dialog from "./Dialog";
 import {AddNewMessageRequest, GetMessagesRequest} from "../../../redux/reducers/dialogs-reducer";
+import Redirect from "react-router-dom/es/Redirect";
 
 
 
@@ -39,7 +40,7 @@ const DialogContainer = ({match, myId, GetMessagesRequest, isFetching, isMessagi
     }, [isFetching, isMessaging])
 
     return (<ElementNameHeader text={'dialog with id' + userId } >
-        {(myId && userId === myId) ? <></> :
+        {(myId && userId === myId) ? <Redirect to='/messages' /> :
         <Dialog myId={myId} messages={props.messages}  owner={props.owner}
             sendMessage={props.AddNewMessageRequest} />}
     </ElementNameHeader>)

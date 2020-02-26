@@ -10,7 +10,9 @@ const DialogMessage = styled.li`
     display: flex;
     padding: 5px 0;
     width 100%;
-    text-align: ${ p => p.myPost ? 'right' : 'left'};    
+    text-align: ${ p => p.myPost ? 'right' : 'left'};   
+    
+    font-size: 12px; 
     
     justify-content: ${ p => p.myPost ? 'right' : 'left'};    
     -webkit-justify-content: ${ p => p.myPost ? 'flex-end' : 'flex-start'};  
@@ -31,8 +33,9 @@ const MessageCut = styled.div`
 
 const RoundUnread = styled.div`
 background: #32608A;
-margin-top: 5px;
-margin-left-2px;
+margin-top: 8px;
+margin-right: -10px;
+margin-left: 4px;
 width: 6px;
 height: 6px;
 border-radius: 3px;

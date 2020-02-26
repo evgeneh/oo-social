@@ -29,7 +29,7 @@ const DialogsList = styled.ol`
     list-style: none;    
     margin: 0;
     width: 1fr;
-    padding: 10px;
+    padding: 10px 20px;
     background:  #DAE1E8;
 
 `;

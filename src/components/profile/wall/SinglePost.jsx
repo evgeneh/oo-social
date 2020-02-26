@@ -6,13 +6,7 @@ import s from  '../user-status/UserStatus.module.css'
 import styled from 'styled-components'
 
 import {dateParse} from "../../../utils/date";
-
-const WallPost = styled.div`
-    display: grid;
-    grid-template-columns: 50px 1fr;
-    grid-gap: 5px;
-    padding: 10px 5px;
-`;
+import {SinglePostBody} from "../../instruments/styles/Styles";
 
 const Title = styled.div`
     background: #eee;
@@ -38,7 +32,7 @@ const SinglePost = ({post}) => {
 
     const date = dateParse.toStrings(post.date)
     return (
-        <WallPost>
+        <SinglePostBody imgWidth={50}>
             <div>
                 <img src={post.owner.photo} alt={post.owner.fullName + " photo"} width={50}/>
             </div>
@@ -53,13 +47,13 @@ const SinglePost = ({post}) => {
                     {post.text}
                 </Text>
                 <PostFooter>
-                    <Link to={"/wall?id=" + post.owner.userId} linkName={"Write on this user's wall"} />
+                    <Link to={"/wall" + post.owner.userId} linkName={"Write on this user's wall"} />
                     &nbsp; &ndash; &nbsp;
-                    <Link to={"/dialog?id=" + post.owner.userId} linkName={"Send private message"} />
+                    <Link to={"/dialog" + post.owner.userId} linkName={"Send private message"} />
                 </PostFooter>
             </div>
 
-        </WallPost>
+        </SinglePostBody>
     )
 }
 
