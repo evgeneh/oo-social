@@ -131,3 +131,15 @@ export const wallAPI = {
        return instance.post('/wall', {userId, text})
     }
 }
+
+export const dialogAPI = {
+
+    getDialog(id) {
+        return instance.put('/dialog?id=' + id)
+    },
+
+    sendMessage(payload) {
+        return instance.post('/dialog/message', payload)
+    }
+
+}

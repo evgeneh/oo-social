@@ -3,10 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="dd2ca76c-d9c0-4f9e-ab6e-aaf385296955" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/instruments/styles/Styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/instruments/styles/Styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/profile/ProfileLeftBlock.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/ProfileLeftBlock.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/profile/dialog/Dialog.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/dialog/Dialog.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/profile/some-of-profile/SomePhotosBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/some-of-profile/SomePhotosBlock.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/dialog/DialogContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/dialog/DialogContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/oosocial-api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/oosocial-api/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducers/dialogs-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/dialogs-reducer.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,19 +39,19 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\270120\oo-social\src\media" />
-      <recent name="E:\270120\oo-social\src\components\forms" />
-      <recent name="F:\old-ontach\src\components\photos\modal-photo-view" />
-      <recent name="F:\old-ontach\src\components\profile\some-friends" />
-      <recent name="F:\old-ontach\src\components\instruments" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\270120\oo-social\src\components\header" />
       <recent name="E:\270120\oo-social\src\components\profile" />
       <recent name="E:\270120\oo-social\src\components\profile\wall" />
       <recent name="E:\270120\oo-social\src\components\Footer" />
       <recent name="E:\270120\oo-social\src\components\profile\some-friends" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\270120\oo-social\src\media" />
+      <recent name="E:\270120\oo-social\src\components\forms" />
+      <recent name="F:\old-ontach\src\components\photos\modal-photo-view" />
+      <recent name="F:\old-ontach\src\components\profile\some-friends" />
+      <recent name="F:\old-ontach\src\components\instruments" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -187,7 +187,7 @@
       <workItem from="1582279437464" duration="40490000" />
       <workItem from="1582452623227" duration="21729000" />
       <workItem from="1582572995310" duration="733000" />
-      <workItem from="1582646166481" duration="7489000" />
+      <workItem from="1582646166481" duration="19820000" />
     </task>
     <servers />
   </component>

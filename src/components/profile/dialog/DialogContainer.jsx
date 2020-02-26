@@ -6,11 +6,11 @@ import {withRouter} from "react-router-dom";
 
 import ElementNameHeader from "../element-name-header/ElementNameHeader";
 import Dialog from "./Dialog";
-import {AddNewMessageRequest} from "../../../redux/reducers/dialogs-reducer";
+import {AddNewMessageRequest, GetMessagesRequest} from "../../../redux/reducers/dialogs-reducer";
 
 
 
-const DialogContainer = ({match, myId, ...props}) => {
+const DialogContainer = ({match, myId, GetMessagesRequest, ...props}) => {
 
     let userId =( match.params.userId && match.params.userId !== 's') ? match.params.userId : myId;
 
@@ -19,12 +19,15 @@ const DialogContainer = ({match, myId, ...props}) => {
         if (myId && userId === myId) {
             //getDialogList()
         }
+        else {
+            GetMessagesRequest(userId)
+        }
     }
 
     useEffect(() => { handleMessagesChange()}, [match.params.userId, parseInt(userId)])
 
     return (<ElementNameHeader text={'dialog with id' + userId } >
-        <Dialog myId={props.myId} messages={props.messages} owner={props.owner}
+        <Dialog myId={myId} messages={props.messages} owner={props.owner}
             sendMessage={props.AddNewMessageRequest} />
     </ElementNameHeader>)
 }
@@ -42,5 +45,6 @@ const mapStateToProps = (state) => {
 }
 
 export default compose(withRouter, connect(mapStateToProps, {
-    AddNewMessageRequest
+    AddNewMessageRequest,
+    GetMessagesRequest
 }))(DialogContainer)

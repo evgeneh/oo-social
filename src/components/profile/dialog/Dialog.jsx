@@ -38,10 +38,8 @@ const DialogMessage = styled.li`
     width 100%;
     text-align: ${ p => p.myPost ? 'right' : 'left'};    
     
-    justify-content: ${ p => p.myPost ? 'right' : 'left'};
-
-    
-    
+    justify-content: ${ p => p.myPost ? 'right' : 'left'};    
+    -webkit-justify-content: ${ p => p.myPost ? 'flex-end' : 'flex-start'};  
     small {
         color: grey;
     }
@@ -50,6 +48,7 @@ const DialogMessage = styled.li`
 
 
 const DialogData = styled.li`
+    display: flex;
     padding-top: 5px;
     align-items: center;
     justify-content: center;
@@ -80,11 +79,10 @@ const Dialog = ({messages, owner, totalMessagesCount, myId, sendMessage}) => {
 
     const handleSendMessage = (value) => {
 
-        sendMessage(value.text, 1)
+        sendMessage(value.text, owner.userId)
     }
 
     let reverseMessages = [...messages].reverse()
-
     return (
         <Parent>
             <section className="void"></section>
@@ -93,6 +91,9 @@ const Dialog = ({messages, owner, totalMessagesCount, myId, sendMessage}) => {
                     {
 
                         reverseMessages.map((message) => {
+
+                            const isMyPost = (message.ownerId === myId)
+
                             let date = new Date(message.date)
                             let isNewDay = ! dateCompare.isSameDay(datePrev,date)
                             datePrev = date
@@ -103,10 +104,10 @@ const Dialog = ({messages, owner, totalMessagesCount, myId, sendMessage}) => {
                                      <DateText> {dateParse.toDayAndMonth(date)} </DateText>
                                 </DialogData>
                             }
-                                <DialogMessage key={message.date} myPost={message.myPost}>
+                                <DialogMessage key={message.date} myPost={isMyPost}>
                                     <MessageCut>
                                        {escapedNewLineToLineBreakTag(message.text)}
-                                         <small>{dateParse.toTimeString(message.date)}</small>
+                                        <br/> <small>{dateParse.toTimeString(message.date)}</small>
                                     </MessageCut>
                                 </DialogMessage>
                              </React.Fragment>
