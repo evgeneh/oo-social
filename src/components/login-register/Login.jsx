@@ -47,7 +47,7 @@ const LoginContainer = ({isFetching, totalCount, getUsers, ...props} ) => {
             countUpd = setInterval( () => {
                 if (! isFetching)
                     getUsers(1)
-            }, 1000)
+            }, 2000)
         else
             clearInterval(countUpd)
         return () => clearInterval(countUpd)

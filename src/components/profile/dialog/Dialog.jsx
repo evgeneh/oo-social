@@ -1,13 +1,15 @@
 import React, {useEffect, useRef} from 'react';
 
-
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-import {dateCompare, dateParse} from "../../../utils/date";
-import {DateText, escapedNewLineToLineBreakTag} from "../../instruments/styles/Styles";
-import PostAddForm from "../../forms/PostAddForm";
 import {reduxForm} from "redux-form";
+
+import {dateCompare, dateParse} from "../../../utils/date";
+import {DateText} from "../../instruments/styles/Styles";
+import PostAddForm from "../../forms/PostAddForm";
+
+import DialogSingleMessage from "./DialogSingleMessage";
 
 const Parent = styled.div`
     height: 80vh;
@@ -30,20 +32,6 @@ const DialogsList = styled.ol`
     padding: 10px;
     background:  #DAE1E8;
 
-`
-
-const DialogMessage = styled.li`
-    display: flex;
-    padding: 5px 0;
-    width 100%;
-    text-align: ${ p => p.myPost ? 'right' : 'left'};    
-    
-    justify-content: ${ p => p.myPost ? 'right' : 'left'};    
-    -webkit-justify-content: ${ p => p.myPost ? 'flex-end' : 'flex-start'};  
-    small {
-        color: grey;
-    }
-    
 `;
 
 
@@ -54,18 +42,12 @@ const DialogData = styled.li`
     justify-content: center;
 `;
 
-const MessageCut = styled.div`
-        word-break: break-word;
-        padding: 3px 7px;
-        border-radius: 3px;
-        background: white;  
-        max-width:80%;                 
-    
-`
 
 const PostAddFormDialog = reduxForm({form: "dialogMessage"})(PostAddForm)
 
+
 const Dialog = ({messages, owner, totalMessagesCount, myId, sendMessage}) => {
+
     let datePrev = new Date(0)
 
     const messagesEndRef = useRef(null)
@@ -89,7 +71,6 @@ const Dialog = ({messages, owner, totalMessagesCount, myId, sendMessage}) => {
             <DialogBox>
                 <DialogsList>
                     {
-
                         reverseMessages.map((message) => {
 
                             const isMyPost = (message.ownerId === myId)
@@ -104,12 +85,10 @@ const Dialog = ({messages, owner, totalMessagesCount, myId, sendMessage}) => {
                                      <DateText> {dateParse.toDayAndMonth(date)} </DateText>
                                 </DialogData>
                             }
-                                <DialogMessage key={message.date} myPost={isMyPost}>
-                                    <MessageCut>
-                                       {escapedNewLineToLineBreakTag(message.text)}
-                                        <br/> <small>{dateParse.toTimeString(message.date)}</small>
-                                    </MessageCut>
-                                </DialogMessage>
+
+                                <DialogSingleMessage date={date} isMyPost={isMyPost}
+                                                     isRead={message.isRead} text={message.text}/>
+
                              </React.Fragment>
                         })
 
