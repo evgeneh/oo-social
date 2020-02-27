@@ -13,6 +13,7 @@ const MenuHiddenBody = styled.div`
     background: transparent;
     width: 100%;
     height: 100%;
+    z-index: 10;
 `
 
 const MenuHiddenBlock = styled.div`

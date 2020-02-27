@@ -5,6 +5,7 @@ import TextBox from "./inputs-validate/TextBox";
 import Button from "../instruments/buttons/Button";
 
 import styled from 'styled-components'
+import {required} from "./forms-validators";
 
 const MessageContainer = styled.form`
     padding: 5px;    
@@ -25,7 +26,7 @@ const PostAddForm = (props) => {
 
         <MessageContainer onSubmit={props.handleSubmit}>
 
-            <Field name="text" component={TextBox} multiline={true}/>
+            <Field name="text" component={TextBox} multiline={true} validate={[required]} />
             <PostSubmit>
                 <Button> Add post </Button>
             </PostSubmit>

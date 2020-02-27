@@ -19,6 +19,15 @@ const Parent = styled.div`
     section {
         background: #DAE1E8;   
     }
+    @media (max-width: 375px) {
+      grid-template-rows: 1fr auto 70px;
+      z-index: 5;  
+      position: absolute;
+      top: 70px;
+      left: 0;
+      right: 0;
+      height: calc(95% - 70px);
+    }
 `
 
 const DialogBox = styled.div`    
@@ -31,7 +40,7 @@ const DialogsList = styled.ol`
     width: 1fr;
     padding: 10px 20px;
     background:  #DAE1E8;
-
+    
 `;
 
 
@@ -42,6 +51,20 @@ const DialogData = styled.li`
     justify-content: center;
 `;
 
+const MessageCreation = styled.div`
+     background: white;`
+/*
+     @media (max-width: 375px) {
+     padding: 5px;
+
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+     }
+`
+*/
 
 const PostAddFormDialog = reduxForm({form: "dialogMessage"})(PostAddForm)
 
@@ -96,7 +119,9 @@ const Dialog = ({messages, owner, totalMessagesCount, myId, sendMessage}) => {
                 </DialogsList>
                 <div ref={messagesEndRef} />
             </DialogBox>
-            <PostAddFormDialog onSubmit={handleSendMessage} />
+            <MessageCreation>
+                <PostAddFormDialog onSubmit={handleSendMessage} />
+            </MessageCreation>
         </Parent>
     )
 }

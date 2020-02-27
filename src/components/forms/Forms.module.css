@@ -1,7 +1,7 @@
 .formError {
 	color: orangered;
 	font-size: 10px;
-
+	width: auto;
 }
 .formLabel {
 	color: grey;

@@ -12,6 +12,10 @@ const PageFooter = styled.div`
     height: auto;
     display: table-cell;
     vertical-align: bottom;
+    
+    @media (max-width: 375px) {
+        display: none;
+    }
 `;
 
 

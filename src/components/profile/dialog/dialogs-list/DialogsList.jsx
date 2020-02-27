@@ -14,6 +14,7 @@ import styled from 'styled-components'
 import {dateParse} from "../../../../utils/date";
 
 const DialogBox = styled.div`
+    border-bottom: solid 1px #DAE1E8;
     small {
         color: gray;
     }
@@ -27,7 +28,7 @@ const LastMessageBox = styled.div`
     -webkit-justify-content: ${ p => p.myPost ? 'flex-end' : 'flex-start'};  
     
     &:hover {
-        background: #f5f5f5;
+        background: #eee;
         cursor: pointer;
     }
     
