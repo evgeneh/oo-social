@@ -17,7 +17,7 @@ import PhotosContainer from "./components/photos/PhotosContainer";
 import Footer from "./components/footer/Footer";
 import WallContainer from "./components/profile/wall/WallContainer";
 import DialogContainer from "./components/profile/dialog/DialogContainer";
-import MyDialogListContainer from "./components/profile/dialog/MyDialogListContainer";
+import MyDialogListContainer from "./components/profile/dialog/dialogs-list/MyDialogListContainer";
 
 const ProfileContainer = React.lazy(() => import( "./components/profile/ProfileContainer"));
 const Register = React.lazy(() => import( "./components/login-register/Register"));

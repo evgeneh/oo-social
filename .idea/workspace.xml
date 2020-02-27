@@ -2,19 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd2ca76c-d9c0-4f9e-ab6e-aaf385296955" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/profile/dialog/MyDialogListContainer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/profile/dialog/dialogs-list/DialogsList.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/instruments/styles/Styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/instruments/styles/Styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/profile/dialog/Dialog.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/dialog/Dialog.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/profile/dialog/DialogContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/dialog/DialogContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/profile/dialog/DialogSingleMessage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/dialog/DialogSingleMessage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/dialog/MyDialogListContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/dialog/dialogs-list/MyDialogListContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/profile/wall/SinglePost.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/wall/SinglePost.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/profile/wall/Wall.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/wall/Wall.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/profile/wall/WallContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/wall/WallContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/oosocial-api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/oosocial-api/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers/dialogs-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/dialogs-reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers/requests-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/requests-reducer.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,7 +29,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/profile/dialog" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/profile/dialog/dialogs-list" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -47,19 +40,19 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\270120\oo-social\src\media" />
-      <recent name="E:\270120\oo-social\src\components\forms" />
-      <recent name="F:\old-ontach\src\components\photos\modal-photo-view" />
-      <recent name="F:\old-ontach\src\components\profile\some-friends" />
-      <recent name="F:\old-ontach\src\components\instruments" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\270120\oo-social\src\components\profile\dialog\dialogs-list" />
       <recent name="E:\270120\oo-social\src\components\profile\dialog" />
       <recent name="E:\270120\oo-social\src\components\header" />
       <recent name="E:\270120\oo-social\src\components\profile" />
       <recent name="E:\270120\oo-social\src\components\profile\wall" />
-      <recent name="E:\270120\oo-social\src\components\Footer" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\270120\oo-social\src\components\profile\dialog\dialogs-list" />
+      <recent name="E:\270120\oo-social\src\media" />
+      <recent name="E:\270120\oo-social\src\components\forms" />
+      <recent name="F:\old-ontach\src\components\photos\modal-photo-view" />
+      <recent name="F:\old-ontach\src\components\profile\some-friends" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -196,7 +189,8 @@
       <workItem from="1582452623227" duration="21729000" />
       <workItem from="1582572995310" duration="733000" />
       <workItem from="1582646166481" duration="20555000" />
-      <workItem from="1582733087455" duration="11951000" />
+      <workItem from="1582733087455" duration="12167000" />
+      <workItem from="1582797842445" duration="8884000" />
     </task>
     <servers />
   </component>

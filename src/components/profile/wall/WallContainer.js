@@ -11,13 +11,6 @@ import {getWallPosts} from "../../../redux/selectors/wall-selector";
 import {AddNewPostRequest, getWallRequest} from "../../../redux/reducers/wall-reducer";
 import ElementNameHeader from "../element-name-header/ElementNameHeader";
 
-
-
-/*return <Wall text={"Wall"} isAuth={true} pageId={userId}
-             posts={this.props.posts} count={this.props.postsCount}
-             addPost={this.props.AddNewPostRequest}
-/>*/
-
 const WallContainer = ({match, myId, ...props}) => {
 
     const userId = match.params.userId ? match.params.userId : myId;

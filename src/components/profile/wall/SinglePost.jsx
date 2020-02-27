@@ -8,7 +8,7 @@ import styled from 'styled-components'
 import {dateParse} from "../../../utils/date";
 import {SinglePostBody} from "../../instruments/styles/Styles";
 
-const Title = styled.div`
+export const Title = styled.div`
     background: #eee;
     padding: 5px;
     border-top: 1px solid  #45688E;
