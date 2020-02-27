@@ -53,18 +53,7 @@ const DialogData = styled.li`
 
 const MessageCreation = styled.div`
      background: white;`
-/*
-     @media (max-width: 375px) {
-     padding: 5px;
 
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      margin: 0 auto;
-     }
-`
-*/
 
 const PostAddFormDialog = reduxForm({form: "dialogMessage"})(PostAddForm)
 

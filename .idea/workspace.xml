@@ -3,12 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="dd2ca76c-d9c0-4f9e-ab6e-aaf385296955" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/footer/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/Footer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/forms/Forms.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/forms/Forms.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/forms/PostAddForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/forms/PostAddForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/HeaderMobileMenu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/HeaderMobileMenu.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/profile/dialog/Dialog.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/dialog/Dialog.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/dialog/DialogContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/dialog/DialogContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/profile/dialog/dialogs-list/DialogsList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/dialog/dialogs-list/DialogsList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sidebar/AlertsContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sidebar/AlertsContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/oosocial-api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/oosocial-api/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducers/requests-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/requests-reducer.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -104,9 +104,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.deploy" />
         <item itemvalue="npm.start" />
         <item itemvalue="Jest.+++ reducer for ADD_INPUT" />
+        <item itemvalue="npm.deploy" />
       </list>
     </recent_temporary>
   </component>
@@ -191,7 +191,7 @@
       <workItem from="1582572995310" duration="733000" />
       <workItem from="1582646166481" duration="20555000" />
       <workItem from="1582733087455" duration="12167000" />
-      <workItem from="1582797842445" duration="15024000" />
+      <workItem from="1582797842445" duration="20688000" />
     </task>
     <servers />
   </component>

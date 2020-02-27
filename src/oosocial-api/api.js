@@ -144,6 +144,10 @@ export const dialogAPI = {
 
     getDialogList() {
         return instance.get('dialogs')
+    },
+
+    getMessagesUnread (){
+        return instance.get('dialogs/unread')
     }
 
 }

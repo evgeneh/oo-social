@@ -70,8 +70,10 @@ const DialogsList = ({dialogs, history, myId}) => {
                         </div>
                         <DialogBox>
                             <Title>
-                                <span>Dialog with&nbsp;&nbsp;</span>
-                                <b><Link to={'/id' + dialog.user.userId} linkName={dialog.user.fullName}/></b>
+                                <span>Dialog with&nbsp;</span>
+                                { (dialog.user.userId === myId) ?  <span>yourself</span> :
+                                    <b><Link to={'/id' + dialog.user.userId} linkName={dialog.user.fullName}/></b>
+                                }
                                 <br/>
                                 <small>Last message at {dateParse.toStrings(dialog.date)}</small>
                             </Title>

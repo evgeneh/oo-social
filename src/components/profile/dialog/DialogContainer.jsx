@@ -13,19 +13,14 @@ import Redirect from "react-router-dom/es/Redirect";
 
 const DialogContainer = ({match, myId, GetMessagesRequest, isFetching, isMessaging, ...props}) => {
 
-    let userId =( match.params.userId && match.params.userId !== 's') ? match.params.userId : myId;
+    let userId =( match.params.userId) ? match.params.userId : myId;
 
 
 
     const handleMessagesChange= () => {
-        //getMessagesRequest(userId)
-        if (myId && userId === myId) {
 
-            //getDialogList()
-        }
-        else {
             GetMessagesRequest(userId)
-        }
+
     }
 
     useEffect(() => { handleMessagesChange()}, [match.params.userId, parseInt(userId)])
@@ -34,7 +29,7 @@ const DialogContainer = ({match, myId, GetMessagesRequest, isFetching, isMessagi
             let interval = setInterval( () => {
                 if (! isFetching && ! isMessaging)
                     GetMessagesRequest(userId)
-            }, 2000)
+            }, 3000)
 
         return () => clearInterval(interval)
     }, [isFetching, isMessaging])
